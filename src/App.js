@@ -1,6 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Button from "./atoms/Button";
+import styled from "styled-components";
+
+const RedButton = styled.button`
+  background-color: red;
+`;
 
 function App() {
   return (
@@ -18,6 +24,8 @@ function App() {
         >
           Learn React
         </a>
+        <Button>press me foo</Button>
+        <Button kind="primary">primary</Button>
       </header>
     </div>
   );

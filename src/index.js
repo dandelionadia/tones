@@ -5,6 +5,11 @@ import theme from './theme'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import Layout from 'atomic-layout'
+
+Layout.configure({
+  defaultUnit: 'rem'
+})
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

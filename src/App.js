@@ -2,12 +2,14 @@ import React from 'react'
 import './App.css'
 import Button from './atoms/Button'
 import Heading from './atoms/Heading'
+import Header from './molecules/Header'
 import Text from './atoms/Text'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
     font-size: 14px;
+    color: ${({ theme }) => theme.colors.white};
   }
 `
 
@@ -15,10 +17,8 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
+      <Header />
       <header className="App-header">
-        <Button>press me foo</Button>
-        <Button kind="primary">primary</Button>
-
         <Text basis>nnn</Text>
         <Text small>Small</Text>
         <Text lead>Lead</Text>

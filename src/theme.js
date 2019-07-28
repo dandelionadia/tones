@@ -5,7 +5,7 @@ export default {
     transparent: 'transparent',
     grey: '#282828',
     greyLight: '#b3b3b3',
-    greyDark: '#111111',
+    greyDark: '#181818',
     black: '#050505'
   }
 }

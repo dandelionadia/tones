@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Heading from '../atoms/Heading'
 import Text from '../atoms/Text'
 import Button from '../atoms/Button'
+import Menu from './Menu'
 
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.greyDark};
@@ -21,7 +22,7 @@ const StyledHeader = styled.div`
     left: 0;
     bottom: 0;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     background: linear-gradient(transparent -30%, #181818);
   }
 `
@@ -51,7 +52,7 @@ const Header = () => (
       </Button>
     </Composition>
     <Box flex justifyContent="center" padding={1.5}>
-      menu
+      <Menu />
     </Box>
   </StyledHeader>
 )

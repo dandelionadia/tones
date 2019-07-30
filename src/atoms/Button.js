@@ -13,8 +13,6 @@ const Button = styled.button`
     kind === 'primary' ? 0 : 'inset 0 0 0 2px #b3b3b3'}
   color: ${({ kind, theme }) =>
     kind === 'primary' ? theme.colors.white : theme.colors.green};
-  position: relative;
-  z-index: 2;
 `
 
 export default Button

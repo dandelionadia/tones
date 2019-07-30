@@ -2,8 +2,6 @@ import styled from 'styled-components'
 
 const Text = styled.p`
   font-size: 1rem; //14
-  position: relative;
-  z-index: 2;
 
   ${props =>
     props.small &&
@@ -18,6 +16,12 @@ const Text = styled.p`
     `}
   
   ${props => props.letterSpacing && ` letter-spacing:  0.16rem`}
+
+  ${props =>
+    props.textBold &&
+    `
+    font-weight: bold;
+  `}
 `
 
 export default Text

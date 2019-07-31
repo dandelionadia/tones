@@ -1,9 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import Text from '../atoms/Text'
 
-const StyledMenu = styled.ul``
+const StyledMenu = styled.ul`
+  text-decoration: none;
+  padding: 0;
+  width: 100%;
+`
+const StyledList = styled.li`
+  list-style: none;
+  display: inline-block;
+  padding: 0.8rem;
+  margin: 0.5rem 0.8rem;
+
+  &:hover {
+    color: red;
+  }
+`
 
 export const menu = [
   {
@@ -29,11 +42,13 @@ class Menu extends React.Component {
     return (
       <StyledMenu>
         {menu.map((item, index) => (
-          <li key={index}>
-            <Link to={item.url}>
-              <Text textBold>{item.value}</Text>
-            </Link>
-          </li>
+          <StyledList key={index}>
+            <a src={item.url}>
+              <Text textBold colorGrey>
+                {item.value}
+              </Text>
+            </a>
+          </StyledList>
         ))}
       </StyledMenu>
     )

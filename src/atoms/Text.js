@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const Text = styled.p`
   font-size: 1rem; //14
+  margin: 0;
 
   ${props =>
     props.small &&

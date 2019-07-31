@@ -1,10 +1,13 @@
 import React from 'react'
 import './App.css'
-import Button from './atoms/Button'
-import Heading from './atoms/Heading'
 import Header from './molecules/Header'
-import Text from './atoms/Text'
 import { createGlobalStyle } from 'styled-components'
+import { Box } from 'atomic-layout'
+import { Overview } from './pages/Overview'
+import { Related } from './pages/Related'
+import { Artists } from './pages/Artists'
+import { About } from './pages/About'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,16 +20,17 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
-      <header className="App-header">
-        <Text basis>nnn</Text>
-        <Text small>Small</Text>
-        <Text lead>Lead</Text>
-
-        <Heading as="h1">title</Heading>
-        <Heading as="h2">title</Heading>
-        <Heading as="h3">title</Heading>
-      </header>
+      <Router>
+        <Box>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Overview} />
+            <Route path="/related" component={Related} />
+            <Route path="/artists" component={Artists} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </Box>
+      </Router>
     </div>
   )
 }

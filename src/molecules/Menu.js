@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Text from '../atoms/Text'
 
 const StyledMenu = styled.ul`
@@ -21,19 +22,15 @@ const StyledList = styled.li`
 export const menu = [
   {
     value: 'OVERVIEW',
-    url: '/'
-  },
-  {
-    value: 'RELATED',
-    url: '/related'
-  },
-  {
-    value: 'ARTISTS',
     url: '/artist'
   },
   {
+    value: 'RELATED',
+    url: '/artist/related'
+  },
+  {
     value: 'ABOUT',
-    url: '/about'
+    url: '/artist/about'
   }
 ]
 
@@ -43,11 +40,11 @@ class Menu extends React.Component {
       <StyledMenu>
         {menu.map((item, index) => (
           <StyledList key={index}>
-            <a src={item.url}>
+            <Link to={item.url}>
               <Text textBold colorGrey>
                 {item.value}
               </Text>
-            </a>
+            </Link>
           </StyledList>
         ))}
       </StyledMenu>

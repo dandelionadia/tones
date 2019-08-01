@@ -1,9 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Foo = styled.p`
+  width: 100%;
+  height: 100%;
+  background-color: red;
+`
 
 function About() {
   return (
     <div>
-      <p>foo</p>
+      <Foo>About</Foo>
     </div>
   )
 }

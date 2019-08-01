@@ -3,7 +3,7 @@ import React from 'react'
 function Overview() {
   return (
     <div>
-      <p>foo</p>
+      <p>Overview</p>
     </div>
   )
 }

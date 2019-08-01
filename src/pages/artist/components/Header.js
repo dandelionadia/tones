@@ -1,10 +1,10 @@
 import React from 'react'
 import { Composition, Box } from 'atomic-layout'
 import styled from 'styled-components'
-import Heading from '../atoms/Heading'
-import Text from '../atoms/Text'
-import Button from '../atoms/Button'
-import Menu from './Menu'
+import Heading from '../../../atoms/Heading'
+import Text from '../../../atoms/Text'
+import Button from '../../../atoms/Button'
+import Menu from '../../../molecules/Menu'
 
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.greyDark};
@@ -14,6 +14,7 @@ const StyledHeader = styled.div`
   background-position: 50%;
   position: relative;
   z-index: 0;
+  text-align: center;
 
   &::before {
     content: '';

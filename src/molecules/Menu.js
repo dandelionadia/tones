@@ -21,15 +21,15 @@ const StyledList = styled.li`
 
 export const menu = [
   {
-    value: 'OVERVIEW',
+    value: 'Overview',
     url: '/artist'
   },
   {
-    value: 'RELATED',
+    value: 'Related',
     url: '/artist/related'
   },
   {
-    value: 'ABOUT',
+    value: 'About',
     url: '/artist/about'
   }
 ]

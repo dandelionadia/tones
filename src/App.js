@@ -1,8 +1,7 @@
 import React from 'react'
-import './App.css'
 import { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Artist from './pages/Artist'
+import Index from './pages/artist/Index'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,11 +17,11 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route path="/artist" component={Artist} />
+          <Route path="/artist" component={Index} />
         </Switch>
       </Router>
     </div>

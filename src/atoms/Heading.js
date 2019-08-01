@@ -13,8 +13,8 @@ const Heading = styled.h2`
   ${props =>
     props.as === `h3` &&
     `
-				font-size: 1.1rem; //16
-			`}
+			font-size: 1.1rem; //16
+		`}
 `
 
 export default Heading

@@ -23,6 +23,12 @@ const Text = styled.p`
     `
     font-weight: bold;
   `}
+
+  ${props =>
+    props.margin &&
+    `
+    margin: 10px 0 4px 0;
+  `}
 `
 
 export default Text

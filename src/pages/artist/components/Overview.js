@@ -1,46 +1,47 @@
 import React from 'react'
 import Albums from '../../../molecules/Albums'
+import Song from '../../../molecules/Song'
 import Heading from '../../../atoms/Heading'
 import { Box } from 'atomic-layout'
 
 const albums = [
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/1',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/2',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/3',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/4',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/5',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/6',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/7',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400',
+    src: 'https://satyr.io/400x400/8',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   }
@@ -48,50 +49,42 @@ const albums = [
 
 const singles = [
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/1',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/2',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/3',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/4',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/5',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/6',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/7',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://media.wired.com/photos/5bac2b22b1d78f2d745782f2/master/pass/catrat-82773559.jpg',
+    src: 'https://satyr.io/400x400/8',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   }
@@ -99,20 +92,17 @@ const singles = [
 
 const appearsOn = [
   {
-    src:
-      'https://st2.depositphotos.com/2780829/7647/v/950/depositphotos_76471161-stock-illustration-vector-landscape-flat-style.jpg',
+    src: 'https://satyr.io/400x400/1',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://st2.depositphotos.com/2780829/7647/v/950/depositphotos_76471161-stock-illustration-vector-landscape-flat-style.jpg',
+    src: 'https://satyr.io/400x400/2',
     nameAlbum: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src:
-      'https://st2.depositphotos.com/2780829/7647/v/950/depositphotos_76471161-stock-illustration-vector-landscape-flat-style.jpg',
+    src: 'https://satyr.io/400x400/3',
     nameAlbum: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   }
@@ -123,15 +113,19 @@ class Overview extends React.Component {
     return (
       <>
         <Box padding={1}>
-          <Heading left>Albums</Heading>
+          <Heading>Popular</Heading>
+          <Song />
+        </Box>
+        <Box padding={1}>
+          <Heading>Albums</Heading>
           <Albums data={albums} />
         </Box>
         <Box padding={1}>
-          <Heading left>Singles</Heading>
+          <Heading>Singles</Heading>
           <Albums data={singles} />
         </Box>
         <Box padding={1}>
-          <Heading left>Appears On</Heading>
+          <Heading>Appears On</Heading>
           <Albums data={appearsOn} />
         </Box>
       </>

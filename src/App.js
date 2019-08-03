@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+  }
 `
 
 function App() {

@@ -1,20 +1,31 @@
 import React from 'react'
 import { Composition } from 'atomic-layout'
+import { IoIosMusicalNote } from 'react-icons/io'
+import Text from '../atoms/Text'
+import { forOfStatement } from '@babel/types'
 
 const areasMobile = `
 	icon thumbnail content meta
 	/ auto 50px 1fr
 `
 
-const Song = () => {
+const Song = ({ imageUrl, title, duration }) => {
   return (
     <Composition template={areasMobile} gap={1} alignItems="center">
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>
-          <Icon>Icon</Icon>
-          <Thumbnail>2</Thumbnail>
-          <Content>Content</Content>
-          <Meta>Meta</Meta>
+          <Icon>
+            <IoIosMusicalNote fill="#b3b3b3" />
+          </Icon>
+          <Thumbnail>
+            <img src={imageUrl} alt={title} />
+          </Thumbnail>
+          <Content>
+            <Text big>{title}</Text>
+          </Content>
+          <Meta paddingRight={0.5}>
+            <Text colorGrey>{duration}</Text>
+          </Meta>
         </>
       )}
     </Composition>

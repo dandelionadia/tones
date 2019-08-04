@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import Text from '../atoms/Text'
 
 const StyledImgContainer = styled.div`
-  background-color: #000;
-  padding: 5px;
+  border: 5px solid #000;
   width: 100%;
   overflow: hidden;
+  box-sizing: border-box;
 `
 
 const Albums = ({ data }) => {
@@ -18,7 +18,6 @@ const Albums = ({ data }) => {
       templateColsMd="repear(4, 1fr)"
       templateColsLg="repeat(auto-fill, minmax(150px, 1fr))"
       gap={2}
-      padding={1}
     >
       {data.map(album => (
         <Box>

@@ -9,6 +9,12 @@ const Text = styled.p`
     `
 			font-size: 0.7rem; //12
     `}
+  
+  ${props =>
+    props.big &&
+    `
+      font-size: 1.1rem; //16
+    `}
 
   ${props =>
     props.colorGrey &&

@@ -2,7 +2,6 @@ import React from 'react'
 import { Composition } from 'atomic-layout'
 import { IoIosMusicalNote } from 'react-icons/io'
 import Text from '../atoms/Text'
-import { forOfStatement } from '@babel/types'
 
 const areasMobile = `
 	icon thumbnail content meta

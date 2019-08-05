@@ -3,7 +3,7 @@ import { Composition } from 'atomic-layout'
 import Song from './Song'
 
 const SongList = props => (
-  <Composition gap="4px">
+  <Composition gap="6px">
     {props.list.map(song => (
       <Song
         imageUrl={song.imageUrl}

@@ -20,7 +20,7 @@ const Albums = ({ data }) => {
       gap={2}
     >
       {data.map(album => (
-        <Box>
+        <Box marginBottom={2}>
           <StyledImgContainer>
             <img src={album.imageUrl} alt="img" />
           </StyledImgContainer>

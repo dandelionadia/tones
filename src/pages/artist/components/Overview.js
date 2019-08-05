@@ -4,6 +4,9 @@ import Heading from '../../../atoms/Heading'
 import { Box } from 'atomic-layout'
 import Grid from '../../../atoms/Grid'
 import SongList from '../../../molecules/SongList'
+import ShowMoreButton from '../../../atoms/ShowMoreButton'
+import Text from '../../../atoms/Text'
+import { IoIosArrowDown } from 'react-icons/io'
 
 const albums = [
   {
@@ -121,6 +124,24 @@ const popularSongs = [
       'https://i.scdn.co/image/c03090e1f4b09d79fd41855023460c02e13993a8',
     title: 'Numb',
     duration: '3:05'
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/78a2c6dcc4928bbc9ee4b3480eb096d362e60fbf',
+    title: 'In the End',
+    duration: '3:25'
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/c03090e1f4b09d79fd41855023460c02e13993a8',
+    title: 'Numb',
+    duration: '3:05'
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/78a2c6dcc4928bbc9ee4b3480eb096d362e60fbf',
+    title: 'In the End',
+    duration: '3:25'
   }
 ]
 
@@ -135,14 +156,38 @@ class Overview extends React.Component {
         <Box paddingTop={1} paddingBottom={1}>
           <Heading>Albums</Heading>
           <Albums data={albums} />
+          <Box flex justifyContent="center">
+            <ShowMoreButton>
+              <Text as="span" small letterSpacing>
+                show more
+              </Text>
+              <IoIosArrowDown size={25} />
+            </ShowMoreButton>
+          </Box>
         </Box>
         <Box paddingTop={1} paddingBottom={1}>
           <Heading>Singles</Heading>
           <Albums data={singles} />
+          <Box flex justifyContent="center">
+            <ShowMoreButton>
+              <Text as="span" small letterSpacing>
+                show more
+              </Text>
+              <IoIosArrowDown size={25} />
+            </ShowMoreButton>
+          </Box>
         </Box>
         <Box paddingTop={1} paddingBottom={1}>
           <Heading>Appears On</Heading>
           <Albums data={appearsOn} />
+          <Box flex justifyContent="center">
+            <ShowMoreButton>
+              <Text as="span" small letterSpacing>
+                show more
+              </Text>
+              <IoIosArrowDown size={25} />
+            </ShowMoreButton>
+          </Box>
         </Box>
       </Grid>
     )

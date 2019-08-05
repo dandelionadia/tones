@@ -6,6 +6,7 @@ import Text from '../atoms/Text'
 const StyledMenu = styled.ul`
   text-decoration: none;
   padding: 0;
+  margin: 0;
   width: 100%;
 `
 const StyledList = styled.li`

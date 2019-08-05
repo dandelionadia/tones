@@ -39,7 +39,7 @@ const Header = () => (
       gap={1}
       templateCols="repeat(2, auto)"
       paddingTop={1.1}
-      paddingBottom={2.5}
+      paddingBottom={1.9}
     >
       <Button kind="primary">
         <Text as="span" small LetterSpacing>
@@ -52,7 +52,7 @@ const Header = () => (
         </Text>
       </Button>
     </Composition>
-    <Box flex justifyContent="center" padding={1.5}>
+    <Box flex justifyContent="center" paddingVertical={1.3}>
       <Menu />
     </Box>
   </StyledHeader>

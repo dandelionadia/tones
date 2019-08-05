@@ -11,7 +11,7 @@ const StyledMenu = styled.ul`
 const StyledList = styled.li`
   list-style: none;
   display: inline-block;
-  padding: 0.8rem;
+  padding: 0.3rem;
   margin: 0.5rem 0.8rem;
 
   &:hover {

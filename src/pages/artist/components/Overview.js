@@ -7,104 +7,104 @@ import SongList from '../../../molecules/SongList'
 
 const albums = [
   {
-    src: 'https://satyr.io/400x400/1',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/1',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/2',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/2',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/3',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/3',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/4',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/4',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/5',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/5',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/6',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/6',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/7',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/7',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/8',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/8',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   }
 ]
 
 const singles = [
   {
-    src: 'https://satyr.io/400x400/1',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/1',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/2',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/2',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/3',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/3',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/4',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/4',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/5',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/5',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/6',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/6',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/7',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/7',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/8',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/8',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   }
 ]
 
 const appearsOn = [
   {
-    src: 'https://satyr.io/400x400/1',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/1',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/2',
-    nameAlbum: 'Meteora Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/2',
+    name: 'Meteora Live Around the World',
     artist: 'Linkin Park'
   },
   {
-    src: 'https://satyr.io/400x400/3',
-    nameAlbum: 'Hybrid Theory Live Around the World',
+    imageUrl: 'https://satyr.io/400x400/3',
+    name: 'Hybrid Theory Live Around the World',
     artist: 'Linkin Park'
   }
 ]
@@ -119,8 +119,8 @@ const popularSongs = [
   {
     imageUrl:
       'https://i.scdn.co/image/c03090e1f4b09d79fd41855023460c02e13993a8',
-    title: 'In the End',
-    duration: '3:25'
+    title: 'Numb',
+    duration: '3:05'
   }
 ]
 

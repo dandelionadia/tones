@@ -22,7 +22,7 @@ const Albums = ({ data }) => {
       {data.map(album => (
         <Box marginBottom={2}>
           <StyledImgContainer>
-            <img src={album.imageUrl} alt={album.nameAlbum} />
+            <img src={album.imageUrl} alt={album.name} />
           </StyledImgContainer>
           <Text margin>{album.name}</Text>
           <Text colorGrey>{album.artist}</Text>

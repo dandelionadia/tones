@@ -28,12 +28,12 @@ const StyledHeader = styled.div`
   }
 `
 
-const Header = () => (
+const Header = ({ artistData }) => (
   <StyledHeader>
     <Text small colorGrey letterSpacing>
       16,686,235 MONTHLY LISTENERS
     </Text>
-    <Heading as="h1">Linkin Park</Heading>
+    <Heading as="h1">{artistData.name}</Heading>
     <Composition
       inline
       gap={1}

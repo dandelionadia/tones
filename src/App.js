@@ -32,8 +32,12 @@ function App() {
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route path="/" exact render={() => <Redirect to="/artist" />} />
-          <Route path="/artist" component={Index} />
+          <Route
+            path="/"
+            exact
+            render={() => <Redirect to="/artist/6XyY86QOPPrYVGvF9ch6wz" />}
+          />
+          <Route path="/artist/:artistId" component={Index} />
         </Switch>
       </Router>
     </div>

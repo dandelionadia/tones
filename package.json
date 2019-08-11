@@ -32,5 +32,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-proxy": "^1.17.0",
+    "isomorphic-fetch": "^2.2.1"
   }
 }

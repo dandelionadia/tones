@@ -25,9 +25,9 @@ const Artist = ({ match }) => {
     <div>
       <Header artistData={artistData} />
       <Switch>
-        <Route path="/artist/:artistId" exact component={Overview} />
-        <Route path="/artist/:artistId/related" component={Related} />
-        <Route path="/artist/:artistId/about" component={About} />
+        <Route path={match.path} exact component={Overview} />
+        <Route path={`${match.path}/related`} component={Related} />
+        <Route path={`${match.path}/about`} component={About} />
       </Switch>
     </div>
   )

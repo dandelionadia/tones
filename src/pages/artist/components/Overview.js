@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Albums from '../../../molecules/Albums'
 import Heading from '../../../atoms/Heading'
 import { Box } from 'atomic-layout'
@@ -145,53 +145,69 @@ const popularSongs = [
   }
 ]
 
-class Overview extends React.Component {
-  render() {
-    return (
-      <Grid>
-        <Box paddingTop={1} paddingBottom={1}>
-          <Heading>Popular</Heading>
-          <SongList list={popularSongs} />
-        </Box>
-        <Box paddingTop={1} paddingBottom={1}>
-          <Heading>Albums</Heading>
-          <Albums data={albums} />
-          <Box flex justifyContent="center">
-            <ShowMoreButton>
-              <Text as="span" small letterSpacing>
-                show more
-              </Text>
-              <IoIosArrowDown size={25} />
-            </ShowMoreButton>
-          </Box>
-        </Box>
-        <Box paddingTop={1} paddingBottom={1}>
-          <Heading>Singles</Heading>
-          <Albums data={singles} />
-          <Box flex justifyContent="center">
-            <ShowMoreButton>
-              <Text as="span" small letterSpacing>
-                show more
-              </Text>
-              <IoIosArrowDown size={25} />
-            </ShowMoreButton>
-          </Box>
-        </Box>
-        <Box paddingTop={1} paddingBottom={1}>
-          <Heading>Appears On</Heading>
-          <Albums data={appearsOn} />
-          <Box flex justifyContent="center">
-            <ShowMoreButton>
-              <Text as="span" small letterSpacing>
-                show more
-              </Text>
-              <IoIosArrowDown size={25} />
-            </ShowMoreButton>
-          </Box>
-        </Box>
-      </Grid>
+const Overview = ({ match }) => {
+  const [topSongs, setTopSongs] = useState(null)
+  const { artistId } = match.params
+
+  useEffect(() => {
+    fetch(
+      `https://spotify-proxy-57097.herokuapp.com/v1/artists/${artistId}/top-tracks?country=CZ&limit=5`
     )
+      .then(response => response.json())
+      .then(json => {
+        setTopSongs(json)
+      })
+  }, [artistId])
+
+  if (!topSongs) {
+    return <p>Loading...</p>
   }
+  console.log(topSongs)
+
+  return (
+    <Grid>
+      <Box paddingTop={1} paddingBottom={1}>
+        <Heading>Popular</Heading>
+        <SongList list={topSongs.tracks} />
+      </Box>
+      <Box paddingTop={1} paddingBottom={1}>
+        <Heading>Albums</Heading>
+        <Albums data={albums} />
+        <Box flex justifyContent="center">
+          <ShowMoreButton>
+            <Text as="span" small letterSpacing>
+              show more
+            </Text>
+            <IoIosArrowDown size={25} />
+          </ShowMoreButton>
+        </Box>
+      </Box>
+      <Box paddingTop={1} paddingBottom={1}>
+        <Heading>Singles</Heading>
+        <Albums data={singles} />
+        <Box flex justifyContent="center">
+          <ShowMoreButton>
+            <Text as="span" small letterSpacing>
+              show more
+            </Text>
+            <IoIosArrowDown size={25} />
+          </ShowMoreButton>
+        </Box>
+      </Box>
+      <Box paddingTop={1} paddingBottom={1}>
+        <Heading>Appears On</Heading>
+        <Albums data={appearsOn} />
+        <Box flex justifyContent="center">
+          <ShowMoreButton>
+            <Text as="span" small letterSpacing>
+              show more
+            </Text>
+            <IoIosArrowDown size={25} />
+          </ShowMoreButton>
+        </Box>
+      </Box>
+    </Grid>
+  )
 }
 
 export { Overview }

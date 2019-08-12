@@ -6,6 +6,10 @@ import Text from '../../../atoms/Text'
 import Button from '../../../atoms/Button'
 import Menu from '../../../molecules/Menu'
 
+function formatNumber(number) {
+  return number.toLocaleString ? number.toLocaleString('en-US') : number
+}
+
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.greyDark};
   padding: 5rem 0 1rem;
@@ -28,34 +32,37 @@ const StyledHeader = styled.div`
   }
 `
 
-const Header = ({ artistData }) => (
-  <StyledHeader>
-    <Text small colorGrey letterSpacing>
-      16,686,235 MONTHLY LISTENERS
-    </Text>
-    <Heading as="h1">{artistData.name}</Heading>
-    <Composition
-      inline
-      gap={1}
-      templateCols="repeat(2, auto)"
-      paddingTop={1.1}
-      paddingBottom={1.9}
-    >
-      <Button kind="primary">
-        <Text as="span" small LetterSpacing>
-          play
-        </Text>
-      </Button>
-      <Button>
-        <Text as="span" small letterSpacing>
-          follow
-        </Text>
-      </Button>
-    </Composition>
-    <Box flex justifyContent="center" paddingVertical={1.3}>
-      <Menu />
-    </Box>
-  </StyledHeader>
-)
+const Header = ({ artistData }) => {
+  console.log(artistData)
+  return (
+    <StyledHeader>
+      <Text small colorGrey letterSpacing>
+        {formatNumber(artistData.followers.total)} MONTHLY LISTENERS
+      </Text>
+      <Heading as="h1">{artistData.name}</Heading>
+      <Composition
+        inline
+        gap={1}
+        templateCols="repeat(2, auto)"
+        paddingTop={1.1}
+        paddingBottom={1.9}
+      >
+        <Button kind="primary">
+          <Text as="span" small LetterSpacing>
+            play
+          </Text>
+        </Button>
+        <Button>
+          <Text as="span" small letterSpacing>
+            follow
+          </Text>
+        </Button>
+      </Composition>
+      <Box flex justifyContent="center" paddingVertical={1.3}>
+        <Menu />
+      </Box>
+    </StyledHeader>
+  )
+}
 
 export default Header

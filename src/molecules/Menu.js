@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, withRouter } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import Text from '../atoms/Text'
 
 const StyledMenu = styled.ul`
@@ -8,16 +8,24 @@ const StyledMenu = styled.ul`
   padding: 0;
   margin: 0;
   width: 100%;
+
+  a {
+    color: ${props => props.theme.colors.greyLight};
+  }
 `
+
+const StyledLink = styled(NavLink)`
+  &.active,
+  &:hover {
+    color: ${props => props.theme.colors.white};
+  }
+`
+
 const StyledList = styled.li`
   list-style: none;
   display: inline-block;
   padding: 0.3rem;
   margin: 0.5rem 0.8rem;
-
-  &:hover {
-    color: red;
-  }
 `
 
 export const menu = [
@@ -43,11 +51,9 @@ class Menu extends React.Component {
       <StyledMenu>
         {menu.map((item, index) => (
           <StyledList key={index}>
-            <Link to={match.url + item.url}>
-              <Text textBold colorGrey>
-                {item.value}
-              </Text>
-            </Link>
+            <StyledLink exact to={match.url + item.url}>
+              <Text textBold>{item.value}</Text>
+            </StyledLink>
           </StyledList>
         ))}
       </StyledMenu>

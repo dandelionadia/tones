@@ -13,7 +13,7 @@ function formatNumber(number) {
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.greyDark};
   padding: 5rem 0 1rem;
-  background-image: url('https://i.scdn.co/image/e359e1b7437818b070ed7578770bdff51513b185');
+  background-image: url(${({ imageUrl }) => imageUrl});
   background-size: cover;
   background-position: 50%;
   position: relative;
@@ -35,8 +35,8 @@ const StyledHeader = styled.div`
 const Header = ({ artistData }) => {
   console.log(artistData)
   return (
-    <StyledHeader>
-      <Text small colorGrey letterSpacing>
+    <StyledHeader imageUrl={artistData.images[0].url}>
+      <Text small letterSpacing>
         {formatNumber(artistData.followers.total)} MONTHLY LISTENERS
       </Text>
       <Heading as="h1">{artistData.name}</Heading>

@@ -8,67 +8,6 @@ import ShowMoreButton from '../../../atoms/ShowMoreButton'
 import Text from '../../../atoms/Text'
 import { IoIosArrowDown } from 'react-icons/io'
 
-const singles = [
-  {
-    imageUrl: 'https://satyr.io/400x400/1',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/2',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/3',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/4',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/5',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/6',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/7',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/8',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  }
-]
-
-const appearsOn = [
-  {
-    imageUrl: 'https://satyr.io/400x400/1',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/2',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/3',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  }
-]
-
 const Overview = ({ match }) => {
   const [topSongs, setTopSongs] = useState(null)
   const [albums, setAlbums] = useState(null)
@@ -108,30 +47,6 @@ const Overview = ({ match }) => {
       <Box paddingTop={1} paddingBottom={1}>
         <Heading>Albums</Heading>
         <Albums data={albums.items} />
-        <Box flex justifyContent="center">
-          <ShowMoreButton>
-            <Text as="span" small letterSpacing>
-              show more
-            </Text>
-            <IoIosArrowDown size={25} />
-          </ShowMoreButton>
-        </Box>
-      </Box>
-      <Box paddingTop={1} paddingBottom={1}>
-        <Heading>Singles</Heading>
-        {/* <Albums data={singles} /> */}
-        <Box flex justifyContent="center">
-          <ShowMoreButton>
-            <Text as="span" small letterSpacing>
-              show more
-            </Text>
-            <IoIosArrowDown size={25} />
-          </ShowMoreButton>
-        </Box>
-      </Box>
-      <Box paddingTop={1} paddingBottom={1}>
-        <Heading>Appears On</Heading>
-        {/* <Albums data={appearsOn} /> */}
         <Box flex justifyContent="center">
           <ShowMoreButton>
             <Text as="span" small letterSpacing>

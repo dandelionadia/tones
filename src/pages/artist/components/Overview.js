@@ -35,9 +35,6 @@ const Overview = ({ match }) => {
     return <p>Loading...</p>
   }
 
-  console.log(albums)
-  // console.log(topSongs)
-
   return (
     <Grid>
       <Box paddingTop={1} paddingBottom={1}>

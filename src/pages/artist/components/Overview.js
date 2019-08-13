@@ -8,49 +8,6 @@ import ShowMoreButton from '../../../atoms/ShowMoreButton'
 import Text from '../../../atoms/Text'
 import { IoIosArrowDown } from 'react-icons/io'
 
-const albums = [
-  {
-    imageUrl: 'https://satyr.io/400x400/1',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/2',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/3',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/4',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/5',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/6',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/7',
-    name: 'Hybrid Theory Live Around the World',
-    artist: 'Linkin Park'
-  },
-  {
-    imageUrl: 'https://satyr.io/400x400/8',
-    name: 'Meteora Live Around the World',
-    artist: 'Linkin Park'
-  }
-]
-
 const singles = [
   {
     imageUrl: 'https://satyr.io/400x400/1',
@@ -112,57 +69,35 @@ const appearsOn = [
   }
 ]
 
-const popularSongs = [
-  {
-    imageUrl:
-      'https://i.scdn.co/image/78a2c6dcc4928bbc9ee4b3480eb096d362e60fbf',
-    title: 'In the End',
-    duration: '3:25'
-  },
-  {
-    imageUrl:
-      'https://i.scdn.co/image/c03090e1f4b09d79fd41855023460c02e13993a8',
-    title: 'Numb',
-    duration: '3:05'
-  },
-  {
-    imageUrl:
-      'https://i.scdn.co/image/78a2c6dcc4928bbc9ee4b3480eb096d362e60fbf',
-    title: 'In the End',
-    duration: '3:25'
-  },
-  {
-    imageUrl:
-      'https://i.scdn.co/image/c03090e1f4b09d79fd41855023460c02e13993a8',
-    title: 'Numb',
-    duration: '3:05'
-  },
-  {
-    imageUrl:
-      'https://i.scdn.co/image/78a2c6dcc4928bbc9ee4b3480eb096d362e60fbf',
-    title: 'In the End',
-    duration: '3:25'
-  }
-]
-
 const Overview = ({ match }) => {
   const [topSongs, setTopSongs] = useState(null)
+  const [albums, setAlbums] = useState(null)
   const { artistId } = match.params
 
   useEffect(() => {
     fetch(
-      `https://spotify-proxy-57097.herokuapp.com/v1/artists/${artistId}/top-tracks?country=CZ&limit=5`
+      `https://spotify-proxy-57097.herokuapp.com/v1/artists/${artistId}/top-tracks?country=CZ`
     )
       .then(response => response.json())
       .then(json => {
         setTopSongs(json)
       })
+
+    fetch(
+      `https://spotify-proxy-57097.herokuapp.com/v1/artists/${artistId}/albums`
+    )
+      .then(response => response.json())
+      .then(json => {
+        setAlbums(json)
+      })
   }, [artistId])
 
-  if (!topSongs) {
+  if (!topSongs || !albums) {
     return <p>Loading...</p>
   }
-  console.log(topSongs)
+
+  console.log(albums)
+  // console.log(topSongs)
 
   return (
     <Grid>
@@ -172,7 +107,7 @@ const Overview = ({ match }) => {
       </Box>
       <Box paddingTop={1} paddingBottom={1}>
         <Heading>Albums</Heading>
-        <Albums data={albums} />
+        <Albums data={albums.items} />
         <Box flex justifyContent="center">
           <ShowMoreButton>
             <Text as="span" small letterSpacing>
@@ -184,7 +119,7 @@ const Overview = ({ match }) => {
       </Box>
       <Box paddingTop={1} paddingBottom={1}>
         <Heading>Singles</Heading>
-        <Albums data={singles} />
+        {/* <Albums data={singles} /> */}
         <Box flex justifyContent="center">
           <ShowMoreButton>
             <Text as="span" small letterSpacing>
@@ -196,7 +131,7 @@ const Overview = ({ match }) => {
       </Box>
       <Box paddingTop={1} paddingBottom={1}>
         <Heading>Appears On</Heading>
-        <Albums data={appearsOn} />
+        {/* <Albums data={appearsOn} /> */}
         <Box flex justifyContent="center">
           <ShowMoreButton>
             <Text as="span" small letterSpacing>

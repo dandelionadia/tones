@@ -11,6 +11,7 @@ const StyledImgContainer = styled.div`
 `
 
 const Albums = ({ data }) => {
+  console.log({ data })
   return (
     <Composition
       templateCols="repeat(2, 1fr)"
@@ -22,10 +23,10 @@ const Albums = ({ data }) => {
       {data.map(album => (
         <Box marginBottom={2}>
           <StyledImgContainer>
-            <img src={album.imageUrl} alt={album.name} />
+            <img src={album.images[1].url} alt={album.name} />
           </StyledImgContainer>
           <Text margin>{album.name}</Text>
-          <Text colorGrey>{album.artist}</Text>
+          <Text colorGrey>{album.artists[0].name}</Text>
         </Box>
       ))}
     </Composition>

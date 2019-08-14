@@ -11,7 +11,6 @@ const StyledImgContainer = styled.div`
 `
 
 const Albums = ({ data }) => {
-  console.log({ data })
   return (
     <Composition
       templateCols="repeat(2, 1fr)"

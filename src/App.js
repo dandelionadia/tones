@@ -1,12 +1,8 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Index from './pages/artist/Index'
+import Home from './pages/home/Home'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -32,11 +28,7 @@ function App() {
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route
-            path="/"
-            exact
-            render={() => <Redirect to="/artist/6XyY86QOPPrYVGvF9ch6wz" />}
-          />
+          <Route path="/" exact component={Home} />
           <Route path="/artist/:artistId" component={Index} />
         </Switch>
       </Router>

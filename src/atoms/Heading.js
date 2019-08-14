@@ -9,7 +9,13 @@ const Heading = styled.h2`
     `
       font-size: 4.6rem; // 72
       margin: 0;
-		`}
+    `}
+
+  ${props =>
+    props.marginTop &&
+    `
+      margin-top: 2rem;
+      `}
 `
 
 export default Heading

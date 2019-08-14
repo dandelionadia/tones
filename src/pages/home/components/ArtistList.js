@@ -4,9 +4,9 @@ import Artist from '../atoms/Artist'
 
 const ArtistList = ({ data }) => {
   return (
-    <Composition templateCols="repeat(auto-fill, minmax(150px, 1fr))" gap={2}>
+    <Composition templateCols="repeat(auto-fill, minmax(160px, 1fr))" gap={2}>
       {data.map(item => (
-        <Artist name={item.name} />
+        <Artist name={item.name} artistId={item.id} src={item.src} />
       ))}
     </Composition>
   )

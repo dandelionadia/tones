@@ -21,7 +21,13 @@ const Text = styled.p`
     `
       color: ${props.theme.colors.greyLight}
     `}
-  
+
+  ${props =>
+    props.colorWhite &&
+    `
+      color: ${props.theme.colors.white}
+    `}
+
   ${props => props.letterSpacing && ` letter-spacing:  0.16rem`}
 
   ${props =>
@@ -34,6 +40,12 @@ const Text = styled.p`
     props.margin &&
     `
     margin: 10px 0 4px 0;
+  `}
+
+  ${props =>
+    props.tetxCenter &&
+    `
+    text-align: center;
   `}
 `
 

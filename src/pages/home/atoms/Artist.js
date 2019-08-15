@@ -22,7 +22,7 @@ const Artist = ({ name, artistId, src }) => {
       {Areas => (
         <Link to={`/artist/${artistId}`}>
           <Areas.Img as={StyledImageContainer}>
-            <img src={src} alt="img" />
+            <img src={src} alt={name} />
           </Areas.Img>
           <Areas.Text as={Text} margin tetxCenter colorWhite>
             {name}

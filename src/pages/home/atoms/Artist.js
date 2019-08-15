@@ -4,8 +4,9 @@ import styled from 'styled-components'
 import Text from '../../../atoms/Text'
 import { Link } from 'react-router-dom'
 
-const SryledImageContainer = styled.div`
+const StyledImageContainer = styled.div`
   width: 100%;
+  heght: auto;
   border-radius: 50%;
   overflow: hidden;
 `
@@ -19,8 +20,8 @@ const Artist = ({ name, artistId, src }) => {
   return (
     <Composition areas={areasMobile}>
       {Areas => (
-        <Link to={artistId}>
-          <Areas.Img as={SryledImageContainer}>
+        <Link to={`/artist/${artistId}`}>
+          <Areas.Img as={StyledImageContainer}>
             <img src={src} alt="img" />
           </Areas.Img>
           <Areas.Text as={Text} margin tetxCenter colorWhite>

@@ -2,19 +2,49 @@ import React from 'react'
 import Heading from '../../atoms/Heading'
 import Grid from '../../atoms/Grid'
 import ArtistList from './components/ArtistList'
+import Text from '../../atoms/Text'
 
 const artistLink = [
   {
     name: 'Linkin Park',
-    id:
-      'https://spotify-proxy-57097.herokuapp.com/v1/artists/6XyY86QOPPrYVGvF9ch6wz',
+    id: '6XyY86QOPPrYVGvF9ch6wz',
     src: 'https://i.scdn.co/image/1685533969d5b68cbc630f991e873bd6467f1814'
   },
   {
+    name: 'Red Hot Chili Peppers',
+    id: '0L8ExT028jH3ddEcZwqJJ5',
+    src: 'https://i.scdn.co/image/5b2072e522bf3324019a8c2dc3db20116dff0b87'
+  },
+  {
+    name: 'Bear McCreary',
+    id: '2ifvIECHAlEgPMBuBOJ0lG',
+    src: 'https://i.scdn.co/image/70a4f307be1a34c8492a99f586ec74b4aaa9aae7'
+  },
+  {
+    name: 'Gustavo Santaolalla',
+    id: '4W3fa7tiXGVXl3KilbACqt',
+    src: 'https://i.scdn.co/image/073e6d1c243b565ebbdacd8dc9f43ece985f4ad1'
+  },
+  {
+    name: 'Green Day',
+    id: '7oPftvlwr6VrsViSDV7fJY',
+    src: 'https://i.scdn.co/image/b6a3f82183adb83b6e47cb22afc25724b241d038'
+  },
+  {
+    name: 'My Chemical Romance',
+    id: '7FBcuc1gsnv6Y1nwFtNRCb',
+    src:
+      'https://pbs.twimg.com/profile_images/3351451544/d82ed9e7c92e9f8664fd0a88231b6b41.jpeg'
+  },
+  {
     name: 'Of Monsters and Men',
-    id:
-      'https://spotify-proxy-57097.herokuapp.com/v1/artists/4dwdTW1Lfiq0cM8nBAqIIz',
+    id: '4dwdTW1Lfiq0cM8nBAqIIz',
     src: 'https://i.scdn.co/image/3e38d07dccf32d6b32c1b7768263041ebe5e50c5'
+  },
+  {
+    name: 'Metallica',
+    id: '2ye2Wgw4gimLv2eAKyk1NB',
+    src: 'https://i.scdn.co/image/5a06711d7fc48d5e0e3f9a3274ffed3f0af1bd91'
   }
 ]
 
@@ -22,6 +52,9 @@ const Home = () => {
   return (
     <Grid>
       <Heading marginTop>Artists</Heading>
+      <Text big colorGrey>
+        Click on the artist to go to the artist page
+      </Text>
       <ArtistList data={artistLink} />
     </Grid>
   )

@@ -25,7 +25,7 @@ const StyledLink = styled(NavLink)`
 const StyledList = styled.li`
   list-style: none;
   display: inline-block;
-  padding: 0.3rem;
+  // padding: 0.3rem;
   margin: 0.5rem 0.8rem;
 `
 

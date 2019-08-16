@@ -25,8 +25,11 @@ const StyledLink = styled(NavLink)`
 const StyledList = styled.li`
   list-style: none;
   display: inline-block;
-  // padding: 0.3rem;
   margin: 0.5rem 0.8rem;
+
+  @media (min-width: 768px) {
+    padding: 0.8rem;
+  }
 `
 
 export const menu = [

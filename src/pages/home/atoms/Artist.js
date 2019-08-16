@@ -6,9 +6,12 @@ import { Link } from 'react-router-dom'
 
 const StyledImageContainer = styled.div`
   width: 100%;
-  heght: auto;
+  padding-top: 100%;
   border-radius: 50%;
   overflow: hidden;
+  background-image: url('${({ src }) => src}');
+  background-size: cover;
+  background-position: 50%;
 `
 
 const areasMobile = `
@@ -21,9 +24,7 @@ const Artist = ({ name, artistId, src }) => {
     <Composition areas={areasMobile}>
       {Areas => (
         <Link to={`/artist/${artistId}`}>
-          <Areas.Img as={StyledImageContainer}>
-            <img src={src} alt={name} />
-          </Areas.Img>
+          <Areas.Img as={StyledImageContainer} src={src} />
           <Areas.Text as={Text} margin tetxCenter colorWhite>
             {name}
           </Areas.Text>

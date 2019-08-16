@@ -33,7 +33,6 @@ const StyledHeader = styled.div`
 `
 
 const Header = ({ artistData }) => {
-  console.log(artistData)
   return (
     <StyledHeader imageUrl={artistData.images[0].url}>
       <Text small letterSpacing>

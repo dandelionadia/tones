@@ -1,7 +1,7 @@
 import React from 'react'
 import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
-import Artist from '../atoms/Artist'
+import Artist from '../../../atoms/Artist'
 
 const StyledArtistList = styled.div`
   margin: 2rem 0;

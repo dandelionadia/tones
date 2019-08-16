@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Artist from '../../home/atoms/Artist'
+import Artist from '../../../atoms/Artist'
 import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
 import Grid from '../../../atoms/Grid'
@@ -8,7 +8,7 @@ const StyledArtistList = styled.div`
   margin: 2rem 0;
 `
 
-function Related({ match }) {
+function RelatedArtists({ match }) {
   const [relatedArtist, setRelatedArtist] = useState(null)
   const { artistId } = match.params
 
@@ -47,4 +47,4 @@ function Related({ match }) {
   )
 }
 
-export { Related }
+export { RelatedArtists }

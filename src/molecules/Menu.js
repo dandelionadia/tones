@@ -8,6 +8,7 @@ const StyledMenu = styled.ul`
   padding: 0;
   margin: 0;
   width: 100%;
+  text-transform: uppercase;
 
   a {
     color: ${props => props.theme.colors.greyLight};
@@ -34,7 +35,7 @@ export const menu = [
     url: ''
   },
   {
-    value: 'Related',
+    value: 'Related Artists',
     url: '/related'
   },
   {
@@ -52,7 +53,9 @@ class Menu extends React.Component {
         {menu.map((item, index) => (
           <StyledList key={index}>
             <StyledLink exact to={match.url + item.url}>
-              <Text textBold>{item.value}</Text>
+              <Text textBold small>
+                {item.value}
+              </Text>
             </StyledLink>
           </StyledList>
         ))}

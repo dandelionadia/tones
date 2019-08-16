@@ -7,7 +7,7 @@ const Text = styled.p`
   ${props =>
     props.small &&
     `
-			font-size: 0.7rem; //12
+			font-size: 0.8rem; //12
     `}
   
   ${props =>

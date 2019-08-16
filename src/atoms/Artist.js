@@ -1,7 +1,7 @@
 import React from 'react'
 import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
-import Text from '../../../atoms/Text'
+import Text from './Text'
 import { Link } from 'react-router-dom'
 
 const StyledImageContainer = styled.div`

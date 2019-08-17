@@ -2,12 +2,13 @@ import React from 'react'
 import { Composition } from 'atomic-layout'
 
 const areasMobile = `
-	like dropDown 
+	like dropDown
+	/ auto auto
 `
 
 function Icons() {
   return (
-    <Composition areas={areasMobile} gap={2}>
+    <Composition inline template={areasMobile} gap={2}>
       {Areas => (
         <>
           <Areas.Like>like</Areas.Like>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Composition } from 'atomic-layout'
 import Icons from '../atoms/Icons'
+import Titles from '../atoms/Titles'
 
 const areasMobile = `
   image titles titles
@@ -23,7 +24,9 @@ function Header() {
       {Areas => (
         <>
           <Areas.Image>image</Areas.Image>
-          <Areas.Titles>asklfjlasfjklasfhkjasfhkjsh</Areas.Titles>
+          <Areas.Titles>
+            <Titles />
+          </Areas.Titles>
           <Areas.Info>info</Areas.Info>
           <Areas.Button>buttons</Areas.Button>
           <Areas.Icons>

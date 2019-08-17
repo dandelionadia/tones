@@ -1,6 +1,7 @@
 import React from 'react'
 import { Composition, Box } from 'atomic-layout'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Text from '../atoms/Text'
 
 const StyledImgContainer = styled.div`
@@ -20,13 +21,15 @@ const Albums = ({ data }) => {
       gap={2}
     >
       {data.map(album => (
-        <Box marginBottom={2}>
-          <StyledImgContainer>
-            <img src={album.images[1].url} alt={album.name} />
-          </StyledImgContainer>
-          <Text margin>{album.name}</Text>
-          <Text colorGrey>{album.artists[0].name}</Text>
-        </Box>
+        <Link to={`/album/${album.id}`}>
+          <Box marginBottom={2}>
+            <StyledImgContainer>
+              <img src={album.images[1].url} alt={album.name} />
+            </StyledImgContainer>
+            <Text margin>{album.name}</Text>
+            <Text colorGrey>{album.artists[0].name}</Text>
+          </Box>
+        </Link>
       ))}
     </Composition>
   )

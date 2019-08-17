@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Index from './pages/artist/Index'
 import Home from './pages/home/Home'
+import Album from './pages/album/Album'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,6 +31,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/artist/:artistId" component={Index} />
+          <Route path="/album/:albumsId" component={Album} />
         </Switch>
       </Router>
     </div>

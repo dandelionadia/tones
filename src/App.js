@@ -31,7 +31,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/artist/:artistId" component={Index} />
-          <Route path="/album/:albumsId" component={Album} />
+          <Route path="/album/:albumId" component={Album} />
         </Switch>
       </Router>
     </div>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Text = styled.p`
-  font-size: 1rem; //14
+  font-size: 14px;
   margin: 0;
 
   ${props =>
@@ -46,6 +46,12 @@ const Text = styled.p`
     props.tetxCenter &&
     `
     text-align: center;
+  `}
+
+  ${props =>
+    props.inline &&
+    `
+    display: inline;
   `}
 `
 

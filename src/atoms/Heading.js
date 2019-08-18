@@ -12,6 +12,13 @@ const Heading = styled.h2`
     `}
 
   ${props =>
+    props.as === `h3` &&
+    `
+      font-size: 2rem; // 28
+      margin: 0;
+    `}
+
+  ${props =>
     props.marginTop &&
     `
       margin-top: 2rem;

@@ -97,7 +97,7 @@ function Header({ data }) {
           <Areas.Button align="end" marginTop={1}>
             <StyledButton kind="primary">play</StyledButton>
           </Areas.Button>
-          <Areas.Icons align="end" marginTopLg={2}>
+          <Areas.Icons align="end" marginTopLg={1.5}>
             <Icons />
           </Areas.Icons>
         </>

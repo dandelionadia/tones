@@ -1,6 +1,7 @@
 import React from 'react'
 import { Composition, Only, useResponsiveValue } from 'atomic-layout'
 import styled from 'styled-components'
+import Button from '../../../atoms/Button'
 import Icons from '../atoms/Icons'
 import Text from '../../../atoms/Text'
 import Heading from '../../../atoms/Heading'
@@ -9,7 +10,7 @@ const areasMobile = `
   image titles titles
   image info info
   image button icons
-  / 150px auto 1fr
+  / 180px auto 1fr
 `
 
 const templateLg = `
@@ -34,6 +35,11 @@ const StyledInfo = styled.div`
 
 const AlbumName = styled(Heading)`
   margin-bottom: 0.3rem;
+`
+
+const StyledButton = styled(Button)`
+  min-width: 130px;
+  margin: 0;
 `
 
 function Header({ data }) {
@@ -88,8 +94,8 @@ function Header({ data }) {
               </Text>
             </StyledInfo>
           </Areas.Info>
-          <Areas.Button align="end" marginTopLg={1}>
-            buttons
+          <Areas.Button align="end" marginTop={1}>
+            <StyledButton kind="primary">play</StyledButton>
           </Areas.Button>
           <Areas.Icons align="end" marginTopLg={2}>
             <Icons />

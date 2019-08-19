@@ -53,6 +53,12 @@ const Text = styled.p`
     `
     display: inline;
   `}
+
+  ${props =>
+    props.opacity &&
+    `
+      opacity: .6;
+  `}
 `
 
 export default Text

@@ -4,18 +4,24 @@ import styled from 'styled-components'
 import Grid from '../../atoms/Grid'
 import Header from './components/Header'
 import Content from './components/Content'
+import Layout from 'atomic-layout'
 
 const areasMobile = `
 	header
 	content
 `
 
-const areasLg = `
-	header content
+const templateLg = `
+  header content
+  / 220px auto
 `
 
 const StyledContainer = styled.div`
   padding-top: 2rem;
+
+  @media (min-width: ${Layout.breakpoints.lg.minWidth}) {
+    text-align: center;
+  }
 `
 
 const Album = ({ match }) => {
@@ -37,10 +43,10 @@ const Album = ({ match }) => {
   return (
     <Grid>
       <Composition
-        areas={areasMobile}
-        areasLg={areasLg}
-        gap={2}
         as={StyledContainer}
+        areas={areasMobile}
+        templateLg={templateLg}
+        gap={2}
       >
         {Areas => (
           <>

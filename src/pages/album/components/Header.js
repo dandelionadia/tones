@@ -18,17 +18,12 @@ const templateLg = `
   button
   info
   icons
-  / 200px
 `
 
 const StyledImage = styled.img`
   width: 100%;
   height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-  @media (min-width: 992px) {
-    margin-bottom: 2em;
-  }
 `
 
 const StyledInfo = styled.div`
@@ -37,10 +32,23 @@ const StyledInfo = styled.div`
   opacity: 0.6;
 `
 
+const AlbumName = styled(Heading)`
+  margin-bottom: 0.3rem;
+`
+
 function Header({ data }) {
   const artistLinkColor = useResponsiveValue(
     {
-      lg: true
+      lg: true,
+      xl: true
+    },
+    false
+  )
+
+  const artistLinkOpacity = useResponsiveValue(
+    {
+      lg: true,
+      xl: true
     },
     false
   )
@@ -48,18 +56,28 @@ function Header({ data }) {
   console.log({ artistLinkColor })
 
   return (
-    <Composition template={areasMobile} templateLg={templateLg} gapCol={2}>
+    <Composition
+      template={areasMobile}
+      templateLg={templateLg}
+      gapCol={2}
+      gapRow={1}
+    >
       {Areas => (
         <>
           <Areas.Image>
             <StyledImage src={data.images[0].url} />
           </Areas.Image>
           <Areas.Titles>
-            <Heading as="h3">{data.name}</Heading>
-            <Only as={Text} to="lg" colorGrey inline textBold>
+            <AlbumName as="h3">{data.name}</AlbumName>
+            <Only as={Text} to="lg" colorGrey inline textBold opacity>
               By{' '}
             </Only>
-            <Text colorGrey={artistLinkColor} inline textBold>
+            <Text
+              colorGrey={artistLinkColor}
+              inline
+              textBold
+              opacity={artistLinkOpacity}
+            >
               {data.artists[0].name}
             </Text>
           </Areas.Titles>
@@ -70,8 +88,10 @@ function Header({ data }) {
               </Text>
             </StyledInfo>
           </Areas.Info>
-          <Areas.Button align="end">buttons</Areas.Button>
-          <Areas.Icons align="end">
+          <Areas.Button align="end" marginTopLg={1}>
+            buttons
+          </Areas.Button>
+          <Areas.Icons align="end" marginTopLg={2}>
             <Icons />
           </Areas.Icons>
         </>

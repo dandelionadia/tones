@@ -13,7 +13,7 @@ const areasMobile = `
 
 const templateLg = `
   header content
-  / 220px auto
+  / 20% auto
 `
 
 const StyledHeader = styled.div`
@@ -37,8 +37,6 @@ const Album = ({ match }) => {
   if (!album) {
     return <p>Loading...</p>
   }
-
-  console.log(album.tracks)
 
   return (
     <Grid>

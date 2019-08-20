@@ -55,7 +55,7 @@ const Text = styled.p`
   `}
 
   ${props =>
-    props.opacity &&
+    props.muted &&
     `
       opacity: .6;
   `}

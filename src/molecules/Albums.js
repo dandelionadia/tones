@@ -21,7 +21,7 @@ const Albums = ({ data }) => {
       gap={2}
     >
       {data.map(album => (
-        <Link to={`/album/${album.id}`}>
+        <Link to={`/album/${album.id}`} key={album.id}>
           <Box marginBottom={2}>
             <StyledImgContainer>
               <img src={album.images[1].url} alt={album.name} />

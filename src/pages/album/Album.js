@@ -3,6 +3,7 @@ import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
 import Grid from '../../atoms/Grid'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Layout from 'atomic-layout'
 import SongList from '../../molecules/SongList'
 
@@ -53,6 +54,7 @@ const Album = ({ match }) => {
             </Areas.Header>
             <Areas.Content>
               <SongList list={album.tracks.items} />
+              <Footer data={album.copyrights[0]} />
             </Areas.Content>
           </>
         )}

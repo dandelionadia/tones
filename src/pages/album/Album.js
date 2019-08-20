@@ -3,8 +3,8 @@ import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
 import Grid from '../../atoms/Grid'
 import Header from './components/Header'
-import Content from './components/Content'
 import Layout from 'atomic-layout'
+import SongList from '../../molecules/SongList'
 
 const areasMobile = `
 	header
@@ -16,9 +16,7 @@ const templateLg = `
   / 220px auto
 `
 
-const StyledContainer = styled.div`
-  padding-top: 2rem;
-
+const StyledHeader = styled.div`
   @media (min-width: ${Layout.breakpoints.lg.minWidth}) {
     text-align: center;
   }
@@ -40,21 +38,23 @@ const Album = ({ match }) => {
     return <p>Loading...</p>
   }
 
+  console.log(album.tracks)
+
   return (
     <Grid>
       <Composition
-        as={StyledContainer}
         areas={areasMobile}
         templateLg={templateLg}
         gap={2}
+        marginTop={2}
       >
         {Areas => (
           <>
-            <Areas.Header>
+            <Areas.Header as={StyledHeader}>
               <Header data={album} />
             </Areas.Header>
             <Areas.Content>
-              <Content />
+              <SongList list={album.tracks.items} />
             </Areas.Content>
           </>
         )}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Composition, Only, useResponsiveValue } from 'atomic-layout'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Button from '../../../atoms/Button'
 import Icons from '../atoms/Icons'
 import Text from '../../../atoms/Text'
@@ -76,14 +77,16 @@ function Header({ data }) {
             <Only as={Text} to="lg" colorGrey inline textBold muted>
               By{' '}
             </Only>
-            <Text
-              colorGrey={artistLinkColor}
-              inline
-              textBold
-              muted={artistLinkOpacity}
-            >
-              {data.artists[0].name}
-            </Text>
+            <Link to={`/artist/${data.artists[0].id}`}>
+              <Text
+                colorGrey={artistLinkColor}
+                inline
+                textBold
+                muted={artistLinkOpacity}
+              >
+                {data.artists[0].name}
+              </Text>
+            </Link>
           </Areas.Titles>
           <Areas.Info>
             <StyledInfo>

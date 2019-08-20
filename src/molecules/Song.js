@@ -8,7 +8,7 @@ const areasMobile = `
 	/ auto 50px 1fr
 `
 
-const Song = ({ imageUrl, title, duration }) => {
+const Song = ({ imageUrl, title, duration, artist }) => {
   return (
     <Composition template={areasMobile} gap={1} alignItems="center">
       {({ Icon, Thumbnail, Content, Meta }) => (
@@ -16,11 +16,14 @@ const Song = ({ imageUrl, title, duration }) => {
           <Icon>
             <IoIosMusicalNote fill="#b3b3b3" />
           </Icon>
-          <Thumbnail>
-            <img src={imageUrl} alt={title} />
-          </Thumbnail>
+          {imageUrl && (
+            <Thumbnail>
+              <img src={imageUrl} alt={title} />
+            </Thumbnail>
+          )}
           <Content>
             <Text big>{title}</Text>
+            {artist && <Text colorGrey>{artist.name}</Text>}
           </Content>
           <Meta paddingRight={0.5}>
             <Text colorGrey>{duration}</Text>

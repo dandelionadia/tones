@@ -2,9 +2,9 @@ import React from 'react'
 import { Composition } from 'atomic-layout'
 import Song from './Song'
 
-const SongList = props => (
+const SongList = ({ list }) => (
   <Composition gap="6px">
-    {props.list.slice(0, 5).map(song => {
+    {list.slice(0, 5).map(song => {
       const date = new Date(song.duration_ms)
       const duration =
         date.getMinutes() +
@@ -16,9 +16,10 @@ const SongList = props => (
 
       return (
         <Song
-          imageUrl={song.album.images[2].url}
+          imageUrl={song.album && song.album.images[2].url}
           title={song.name}
           duration={duration}
+          artist={song.artists && song.artists[0]}
         />
       )
     })}

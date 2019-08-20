@@ -1,9 +1,10 @@
 import React from 'react'
+import SongList from '../../../molecules/SongList'
 
-function Content() {
+function Content({ data }) {
   return (
     <div>
-      <p>content</p>
+      <SongList data={data} />
     </div>
   )
 }

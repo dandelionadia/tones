@@ -3,14 +3,23 @@ import { Composition } from 'atomic-layout'
 import { IoIosMusicalNote } from 'react-icons/io'
 import Text from '../atoms/Text'
 
-const areasMobile = `
+const areasFull = `
 	icon thumbnail content meta
 	/ auto 50px 1fr
 `
 
+const areasPlain = `
+	icon content meta
+	/ auto 1fr
+`
+
 const Song = ({ imageUrl, title, duration, artist }) => {
   return (
-    <Composition template={areasMobile} gap={1} alignItems="center">
+    <Composition
+      template={imageUrl ? areasFull : areasPlain}
+      gap={1}
+      alignItems="center"
+    >
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>
           <Icon>

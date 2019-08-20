@@ -59,8 +59,6 @@ function Header({ data }) {
     false
   )
 
-  console.log({ artistLinkColor })
-
   return (
     <Composition
       template={areasMobile}
@@ -75,14 +73,14 @@ function Header({ data }) {
           </Areas.Image>
           <Areas.Titles>
             <AlbumName as="h3">{data.name}</AlbumName>
-            <Only as={Text} to="lg" colorGrey inline textBold opacity>
+            <Only as={Text} to="lg" colorGrey inline textBold muted>
               By{' '}
             </Only>
             <Text
               colorGrey={artistLinkColor}
               inline
               textBold
-              opacity={artistLinkOpacity}
+              muted={artistLinkOpacity}
             >
               {data.artists[0].name}
             </Text>

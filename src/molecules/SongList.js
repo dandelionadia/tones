@@ -4,7 +4,7 @@ import Song from './Song'
 
 const SongList = ({ list }) => (
   <Composition gap="6px">
-    {list.slice(0, 5).map(song => {
+    {list.map(song => {
       const date = new Date(song.duration_ms)
       const duration =
         date.getMinutes() +

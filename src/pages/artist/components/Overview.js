@@ -39,7 +39,7 @@ const Overview = ({ match }) => {
     <Grid>
       <Box paddingTop={1} paddingBottom={1}>
         <Heading>Popular</Heading>
-        <SongList list={topSongs.tracks} />
+        <SongList list={topSongs.tracks.slice(0, 5)} />
       </Box>
       <Box paddingTop={1} paddingBottom={1}>
         <Heading>Albums</Heading>

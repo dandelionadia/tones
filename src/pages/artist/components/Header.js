@@ -32,13 +32,19 @@ const StyledHeader = styled.div`
   }
 `
 
+const StyledTitle = styled(Heading)`
+  @media (max-width: 576px) {
+    font-size: 60px;
+  }
+`
+
 const Header = ({ artistData }) => {
   return (
     <StyledHeader imageUrl={artistData.images[0].url}>
       <Text small letterSpacing>
         {formatNumber(artistData.followers.total)} MONTHLY LISTENERS
       </Text>
-      <Heading as="h1">{artistData.name}</Heading>
+      <StyledTitle as="h1">{artistData.name}</StyledTitle>
       <Composition
         inline
         gap={1}

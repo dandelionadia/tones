@@ -9,7 +9,7 @@ const areasMobile = `
 
 function Icons() {
   return (
-    <Composition inline template={areasMobile} gap={2}>
+    <Composition inline template={areasMobile} gap={1} gapMd={2}>
       {Areas => (
         <>
           <Areas.Like padding="6px">

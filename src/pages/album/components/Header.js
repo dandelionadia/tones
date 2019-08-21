@@ -11,6 +11,13 @@ const areasMobile = `
   image titles titles
   image info info
   image button icons
+  / 140px auto 1fr
+`
+
+const areaMd = `
+  image titles titles
+  image info info
+  image button icons
   / 180px auto 1fr
 `
 
@@ -41,6 +48,10 @@ const AlbumName = styled(Heading)`
 const StyledButton = styled(Button)`
   min-width: 130px;
   margin: 0;
+
+  @media (max-width: 576px) {
+    min-width: 100px;
+  }
 `
 
 function Header({ data }) {
@@ -63,8 +74,10 @@ function Header({ data }) {
   return (
     <Composition
       template={areasMobile}
+      templateMd={areaMd}
       templateLg={templateLg}
-      gapCol={2}
+      gapCol={1}
+      gapColMd={2}
       gapRow={1}
     >
       {Areas => (

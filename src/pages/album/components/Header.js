@@ -7,13 +7,13 @@ import Icons from '../atoms/Icons'
 import Text from '../../../atoms/Text'
 import Heading from '../../../atoms/Heading'
 
-const areasMobile = `
-  image titles titles
-  image info info
-  button icons icons
-  / 140px auto 1fr
+const areaMobile = `
+image image
+titles titles
+info info
+button icons
+/ 120px 1fr
 `
-
 const areaMd = `
   image titles titles
   image info info
@@ -43,6 +43,10 @@ const StyledInfo = styled.div`
 
 const AlbumName = styled(Heading)`
   margin-bottom: 0.3rem;
+
+  @media (max-width: 576px) {
+    font-size: 25px;
+  }
 `
 
 const StyledButton = styled(Button)`
@@ -73,12 +77,14 @@ function Header({ data }) {
 
   return (
     <Composition
-      template={areasMobile}
-      templateMd={areaMd}
+      template={areaMobile}
+      templateSm={areaMd}
       templateLg={templateLg}
       gapCol={1}
       gapColMd={2}
       gapRow={1}
+      maxWidthDown="300px"
+      marginHorizontalDown="auto"
     >
       {Areas => (
         <>

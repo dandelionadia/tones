@@ -10,7 +10,7 @@ import Heading from '../../../atoms/Heading'
 const areasMobile = `
   image titles titles
   image info info
-  image button icons
+  button icons icons
   / 140px auto 1fr
 `
 

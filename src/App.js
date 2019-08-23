@@ -1,9 +1,16 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Composition } from 'atomic-layout'
 import Index from './pages/artist/Index'
 import Home from './pages/home/Home'
 import Album from './pages/album/Album'
+import NawBar from './molecules/NawBar'
+
+const areaMobile = `
+  navBar content
+  / 200px auto
+`
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -24,18 +31,27 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <GlobalStyle />
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/artist/:artistId" component={Index} />
-          <Route path="/album/:albumId" component={Album} />
-        </Switch>
-      </Router>
-    </div>
+    <Composition template={areaMobile}>
+      {Areas => (
+        <>
+          <GlobalStyle />
+          <Router>
+            <Areas.NavBar>
+              <NawBar />
+            </Areas.NavBar>
+            <Areas.Content>
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/artist/:artistId" component={Index} />
+                <Route path="/album/:albumId" component={Album} />
+              </Switch>
+            </Areas.Content>
+          </Router>
+        </>
+      )}
+    </Composition>
   )
 }
 

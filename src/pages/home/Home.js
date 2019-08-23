@@ -1,4 +1,6 @@
 import React from 'react'
+import { Composition } from 'atomic-layout'
+import styled from 'styled-components'
 import Heading from '../../atoms/Heading'
 import Grid from '../../atoms/Grid'
 import ArtistList from './components/ArtistList'
@@ -48,15 +50,21 @@ const artistLink = [
   }
 ]
 
+const StyledHome = styled.div`
+  background: linear-gradient(0.25turn, #32311f, #090906);
+`
+
 const Home = () => {
   return (
-    <Grid>
-      <Heading marginTop>Artists</Heading>
-      <Text big colorGrey>
-        Click on the artist to go to the artist page
-      </Text>
-      <ArtistList data={artistLink} />
-    </Grid>
+    <Composition as={StyledHome}>
+      <Grid>
+        <Heading marginTop>Artists</Heading>
+        <Text big colorGrey>
+          Click on the artist to go to the artist page
+        </Text>
+        <ArtistList data={artistLink} />
+      </Grid>
+    </Composition>
   )
 }
 

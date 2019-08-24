@@ -6,6 +6,7 @@ import Text from './Text'
 
 const areasMobile = `
 	icon name
+	/ auto 1fr
 `
 
 const StyledUl = styled.ul`
@@ -28,27 +29,40 @@ const StyledLink = styled(NavLink)`
   }
 `
 
-const Link = ({ data }) => {
+const Link = ({ menuItem }) => {
   return (
-    <Composition areas={areasMobile} gapCol={1} as={StyledUl}>
+    <Composition
+      template={areasMobile}
+      as={StyledLink}
+      gapRow={2}
+      gapCol={1}
+      exact
+      to={menuItem.url}
+    >
       {({ Icon, Name }) => (
         <>
-          {data.map((menuItem, index) => (
-            <Box as="li" key={index} gapRow={2}>
-              <StyledLink exact to={menuItem.url}>
-                <Icon marginRight={1}>
-                  <menuItem.icon size={20} />
-                </Icon>
-                <Name>
-                  <Text textBold>{menuItem.name}</Text>
-                </Name>
-              </StyledLink>
-            </Box>
-          ))}
+          <Icon>
+            <menuItem.icon size={20} />
+          </Icon>
+          <Name>
+            <Text textBold>{menuItem.name}</Text>
+          </Name>
         </>
       )}
     </Composition>
   )
 }
 
-export default withRouter(Link)
+const Menu = ({ data }) => {
+  return (
+    <Composition as={StyledUl} gapRow={2}>
+      {data.map((menuItem, index) => (
+        <li key={index}>
+          <Link menuItem={menuItem} />
+        </li>
+      ))}
+    </Composition>
+  )
+}
+
+export default withRouter(Menu)

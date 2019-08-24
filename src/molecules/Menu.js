@@ -34,7 +34,7 @@ const StyledList = styled.li`
 
 export const menu = [
   {
-    value: 'gfghfgh',
+    value: 'overview',
     url: ''
   },
   {

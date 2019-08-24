@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Composition } from 'atomic-layout'
 import Logo from '../atoms/Logo.svg'
+import Link from '../atoms/Link'
+import { GoHome, GoSearch } from 'react-icons/go'
 
 const areasMobile = `
   logo
@@ -23,6 +25,19 @@ const StyledLogo = styled.div`
   height: 40px;
 `
 
+const dataLink = [
+  {
+    icon: GoHome,
+    name: 'Home',
+    url: '/'
+  },
+  {
+    icon: GoSearch,
+    name: 'Search',
+    url: ''
+  }
+]
+
 const NawBar = () => {
   return (
     <Composition areas={areasMobile} as={StyledNavBar} gap={1}>
@@ -32,7 +47,7 @@ const NawBar = () => {
             <img src={Logo} />
           </Areas.Logo>
           <Areas.Links>
-            <div>Links</div>
+            <Link data={dataLink} />
           </Areas.Links>
           <Areas.UserInfo flex align="end">
             <div>user info</div>

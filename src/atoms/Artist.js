@@ -14,6 +14,10 @@ const StyledImageContainer = styled.div`
   background-position: 50%;
 `
 
+const StyleContainer = styled.div`
+  height: 34vh;
+`
+
 const areasMobile = `
 	img
 	text
@@ -21,7 +25,7 @@ const areasMobile = `
 
 const Artist = ({ name, artistId, src }) => {
   return (
-    <Composition areas={areasMobile}>
+    <Composition areas={areasMobile} as={StyleContainer}>
       {Areas => (
         <Link to={`/artist/${artistId}`}>
           <Areas.Img as={StyledImageContainer} src={src} />

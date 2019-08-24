@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Composition } from 'atomic-layout'
+import Logo from '../atoms/Logo.svg'
 
 const areasMobile = `
   logo
@@ -17,13 +18,18 @@ const StyledNavBar = styled.div`
   top: 0;
 `
 
+const StyledLogo = styled.div`
+  width: 131px;
+  height: 40px;
+`
+
 const NawBar = () => {
   return (
-    <Composition areas={areasMobile} as={StyledNavBar} gap={2}>
+    <Composition areas={areasMobile} as={StyledNavBar} gap={1}>
       {Areas => (
         <>
-          <Areas.Logo>
-            <div>Logo</div>
+          <Areas.Logo as={StyledLogo}>
+            <img src={Logo} />
           </Areas.Logo>
           <Areas.Links>
             <div>Links</div>

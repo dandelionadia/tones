@@ -9,7 +9,7 @@ import NawBar from './molecules/NawBar'
 
 const areaMobile = `
   navBar content
-  / 200px auto
+  / 230px auto
 `
 
 const GlobalStyle = createGlobalStyle`

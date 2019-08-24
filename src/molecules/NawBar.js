@@ -4,6 +4,7 @@ import { Composition } from 'atomic-layout'
 import Logo from '../atoms/Logo.svg'
 import Link from '../atoms/Link'
 import { GoHome, GoSearch } from 'react-icons/go'
+import User from '../atoms/User'
 
 const areasMobile = `
   logo
@@ -50,7 +51,7 @@ const NawBar = () => {
             <Link data={dataLink} />
           </Areas.Links>
           <Areas.UserInfo flex align="end">
-            <div>user info</div>
+            <User />
           </Areas.UserInfo>
         </>
       )}

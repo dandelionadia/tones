@@ -8,6 +8,11 @@ import Album from './pages/album/Album'
 import NawBar from './molecules/NawBar'
 
 const areaMobile = `
+  content
+  / auto
+`
+
+const areaMd = `
   navBar content
   / 230px auto
 `
@@ -33,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   return (
-    <Composition template={areaMobile}>
+    <Composition template={areaMobile} templateMd={areaMd}>
       {Areas => (
         <>
           <GlobalStyle />

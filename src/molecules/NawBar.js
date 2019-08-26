@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Composition } from 'atomic-layout'
 import Logo from '../atoms/Logo.svg'
-import Link from '../atoms/Link'
+import Menu from '../atoms/Menu'
 import { GoHome, GoSearch } from 'react-icons/go'
 import User from '../atoms/User'
 
@@ -39,6 +39,14 @@ const dataLink = [
   }
 ]
 
+const dataUser = [
+  {
+    name: 'Dangora',
+    srcAvatar:
+      'https://imgix.ranker.com/user_node_img/50058/1001158933/original/momo-is-an-incarnation-of-aye-aye-the-lemur-spirit-photo-u1?w=650&q=50&fm=pjpg&fit=crop&crop=faces'
+  }
+]
+
 const NawBar = () => {
   return (
     <Composition areas={areasMobile} as={StyledNavBar} gap={1}>
@@ -48,10 +56,10 @@ const NawBar = () => {
             <img src={Logo} />
           </Areas.Logo>
           <Areas.Links>
-            <Link data={dataLink} />
+            <Menu data={dataLink} />
           </Areas.Links>
           <Areas.UserInfo flex align="end">
-            <User />
+            <User data={dataUser} />
           </Areas.UserInfo>
         </>
       )}

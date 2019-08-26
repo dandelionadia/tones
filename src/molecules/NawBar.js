@@ -53,7 +53,7 @@ const NawBar = () => {
       {Areas => (
         <>
           <Areas.Logo as={StyledLogo}>
-            <img src={Logo} />
+            <img src={Logo} alt="logo" />
           </Areas.Logo>
           <Areas.Links>
             <Menu data={dataLink} />

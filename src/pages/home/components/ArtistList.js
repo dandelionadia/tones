@@ -10,7 +10,7 @@ const StyledArtistList = styled.div`
 const ArtistList = ({ data }) => {
   return (
     <Composition
-      templateCols="repeat(auto-fill, minmax(160px, 1fr))"
+      templateCols="repeat(auto-fill, minmax(150px, 1fr))"
       gap={2}
       as={StyledArtistList}
     >

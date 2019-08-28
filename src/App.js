@@ -6,8 +6,10 @@ import Index from './pages/artist/Index'
 import Home from './pages/home/Home'
 import Album from './pages/album/Album'
 import NawBar from './molecules/NawBar'
+import MenuMobile from './atoms/MenuMobile'
 
 const areaMobile = `
+  menuMobile
   content
   / auto
 `
@@ -43,6 +45,9 @@ const App = () => {
         <>
           <GlobalStyle />
           <Router>
+            <Areas.MenuMobile>
+              <MenuMobile />
+            </Areas.MenuMobile>
             <Areas.NavBar>
               <NawBar />
             </Areas.NavBar>

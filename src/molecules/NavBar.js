@@ -47,7 +47,7 @@ const dataUser = [
   }
 ]
 
-const NawBar = () => {
+const NavBar = () => {
   return (
     <Composition template={areasMobile} as={StyledNavBar} gap={2}>
       {Areas => (
@@ -67,4 +67,4 @@ const NawBar = () => {
   )
 }
 
-export default NawBar
+export default NavBar

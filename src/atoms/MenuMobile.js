@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import NawBar from '../molecules/NawBar'
+import NavBar from '../molecules/NavBar'
 
 const StyledContainerMenu = styled.div`
   position: absolute;
@@ -55,7 +55,7 @@ class MenuMobile extends React.Component {
     return (
       <StyledContainerMenu>
         <StyledMenu isOpen={this.state.isMenuOpen}>
-          <NawBar />
+          <NavBar />
         </StyledMenu>
         <MenuBtn onClick={this.handleMenuClick} />
       </StyledContainerMenu>

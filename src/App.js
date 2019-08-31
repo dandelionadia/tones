@@ -5,7 +5,7 @@ import { Composition } from 'atomic-layout'
 import Index from './pages/artist/Index'
 import Home from './pages/home/Home'
 import Album from './pages/album/Album'
-import NawBar from './molecules/NawBar'
+import NavBar from './molecules/NavBar'
 import MenuMobile from './atoms/MenuMobile'
 
 const areaMobile = `
@@ -49,7 +49,7 @@ const App = () => {
               <MenuMobile />
             </Areas.MenuMobile>
             <Areas.NavBar>
-              <NawBar />
+              <NavBar />
             </Areas.NavBar>
             <Areas.Content>
               <Switch>

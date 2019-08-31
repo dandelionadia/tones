@@ -7,9 +7,9 @@ import { GoHome, GoSearch } from 'react-icons/go'
 import User from '../atoms/User'
 
 const areasMobile = `
-  logo
-  links
-  userInfo
+  logo auto
+  links 1fr
+  userInfo auto
 `
 
 const StyledNavBar = styled.div`
@@ -49,7 +49,7 @@ const dataUser = [
 
 const NawBar = () => {
   return (
-    <Composition areas={areasMobile} as={StyledNavBar} gap={1}>
+    <Composition template={areasMobile} as={StyledNavBar} gap={2}>
       {Areas => (
         <>
           <Areas.Logo as={StyledLogo}>

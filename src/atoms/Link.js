@@ -23,7 +23,6 @@ const Link = ({ menuItem }) => {
     <Composition
       template={areasMobile}
       as={StyledLink}
-      gapRow={2}
       gapCol={1}
       exact
       to={menuItem.url}

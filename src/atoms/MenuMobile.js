@@ -4,15 +4,23 @@ import NawBar from '../molecules/NawBar'
 
 const StyledContainerMenu = styled.div`
   position: absolute;
-  right: -200px;
-  top: 1rem;
-  width: 250px;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
 `
+
 const StyledMenu = styled.div`
-  transform: ${({ isOpen }) =>
-    isOpen ? 'translate3d(-80%, 0, 0)' : 'translate3d(20%, 0, 0)'};
+  margin-left: ${({ isOpen }) => (isOpen ? '0' : '-200px')};
+  /* visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')}; */
+  /** @todo Finish tomorrow */
+  transition: margin 1s ease-out;
 `
-const StyledMenuBtn = styled.div``
+
+const StyledMenuBtn = styled.div`
+  padding: 1rem;
+`
 
 const StyledMenuBtnLine = styled.div`
   background-color: white;
@@ -46,10 +54,10 @@ class MenuMobile extends React.Component {
   render() {
     return (
       <StyledContainerMenu>
-        <MenuBtn onClick={this.handleMenuClick} />
         <StyledMenu isOpen={this.state.isMenuOpen}>
           <NawBar />
         </StyledMenu>
+        <MenuBtn onClick={this.handleMenuClick} />
       </StyledContainerMenu>
     )
   }

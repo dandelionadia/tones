@@ -17,7 +17,7 @@ const StyledUl = styled.ul`
 
 const Menu = ({ data }) => {
   return (
-    <Composition as={StyledUl} gapRow={2}>
+    <Composition as={StyledUl} gapRow={1.25}>
       {data.map((menuItem, index) => (
         <li key={index}>
           <Link menuItem={menuItem} />

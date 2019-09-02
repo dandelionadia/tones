@@ -21,13 +21,14 @@ const StyledMenu = styled.div`
 `
 
 const StyledMenuBtn = styled.div`
+  background-color: darkslategrey;
   padding: 1rem;
 `
 
 const StyledMenuBtnLine = styled.div`
   background-color: white;
-  width: 30px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   margin: 0 0 5px 0;
 `
 

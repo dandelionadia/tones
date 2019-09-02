@@ -10,8 +10,6 @@ const areasMobile = `
 `
 
 const StyledLink = styled(NavLink)`
-  // display: flex;
-
   &.active,
   &:hover {
     color: ${props => props.theme.colors.white};

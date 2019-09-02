@@ -11,7 +11,7 @@ import MenuMobile from './atoms/MenuMobile'
 const areaMobile = `
   menuMobile
   content
-  / auto
+ 
 `
 
 const areaMd = `

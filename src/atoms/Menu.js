@@ -8,7 +8,6 @@ const StyledUl = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  // display: block !important;
 
   a {
     color: ${props => props.theme.colors.greyLight};

@@ -9,12 +9,14 @@ const StyledContainerMenu = styled.div`
   top: 0;
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    position: fixed;
+  }
 `
 
 const StyledMenu = styled.div`
   margin-left: ${({ isOpen }) => (isOpen ? '0' : '-200px')};
-  /* visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')}; */
-  /** @todo Finish tomorrow */
   transition: margin 1s ease-out;
 `
 

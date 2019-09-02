@@ -34,9 +34,9 @@ const StyledMenuBtnLine = styled.div`
 const MenuBtn = ({ onClick }) => {
   return (
     <StyledMenuBtn onClick={onClick}>
-      <StyledMenuBtnLine></StyledMenuBtnLine>
-      <StyledMenuBtnLine></StyledMenuBtnLine>
-      <StyledMenuBtnLine></StyledMenuBtnLine>
+      <StyledMenuBtnLine />
+      <StyledMenuBtnLine />
+      <StyledMenuBtnLine />
     </StyledMenuBtn>
   )
 }

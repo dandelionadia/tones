@@ -56,7 +56,7 @@ const StyledHome = styled.div`
 
 const Home = () => {
   return (
-    <Composition as={StyledHome} height="100%">
+    <Composition as={StyledHome} height="100%" paddingTop={2}>
       <Grid>
         <Heading marginTop>Artists</Heading>
         <Text big colorGrey>

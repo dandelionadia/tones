@@ -29,7 +29,10 @@ const StyledMenuBtnLine = styled.div`
   background-color: white;
   width: 20px;
   height: 2px;
-  margin: 0 0 5px 0;
+
+  &:not(:last-child) {
+    margin: 0 0 5px 0;
+  }
 `
 
 const MenuBtn = ({ onClick }) => {

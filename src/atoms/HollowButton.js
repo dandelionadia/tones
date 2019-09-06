@@ -5,7 +5,7 @@ const HollowButton = styled.button`
   color: ${({ kind, theme }) =>
     kind === 'primary' ? theme.colors.green : theme.colors.white};
   padding: ${({ kind }) => (kind === 'primary' ? '0.9rem 2.8rem' : '7px 22px')};
-  margin: 15px 0;
+  margin: ${({ kind }) => (kind === 'primary' ? '15px 0' : '15px 0 0 0')};
   text-transform: uppercase;
   font-size: 0.7rem;
   border-radius: 2rem;

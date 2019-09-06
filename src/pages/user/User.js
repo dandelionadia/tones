@@ -18,6 +18,23 @@ const StyledImageBox = styled.div`
   overflow: hidden;
 `
 
+const dataButtons = [
+  {
+    button: 'view account'
+  },
+  {
+    button: 'full website'
+  },
+  ,
+  {
+    button: 'help'
+  },
+  ,
+  {
+    button: 'log out'
+  }
+]
+
 const User = () => {
   return (
     <>
@@ -27,7 +44,7 @@ const User = () => {
         alignItems="center"
         justifyItems="center"
         paddingTop="50px"
-        maxWidth="200px"
+        maxWidth="230px"
         marginHorizontal="auto"
       >
         <StyledImageBox>
@@ -37,7 +54,9 @@ const User = () => {
           ></img>
         </StyledImageBox>
         <Heading margin>Dangora</Heading>
-        <HollowButton>btn</HollowButton>
+        {dataButtons.map(button => (
+          <HollowButton>{button.button}</HollowButton>
+        ))}
         <ul>
           <li>foo</li>
         </ul>

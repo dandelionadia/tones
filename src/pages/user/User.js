@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Composition } from 'atomic-layout'
 import Heading from '../../atoms/Heading'
-import Button from '../../atoms/Button'
+import HollowButton from '../../atoms/HollowButton'
 
 const StyledImageBox = styled.div`
   width: 200px;
@@ -28,7 +28,7 @@ const User = () => {
         ></img>
       </StyledImageBox>
       <Heading margin>Dangora</Heading>
-      <Button padding>btn</Button>
+      <HollowButton>btn</HollowButton>
       <ul>
         <li>foo</li>
       </ul>

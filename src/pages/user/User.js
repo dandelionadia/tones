@@ -4,11 +4,13 @@ import { Composition } from 'atomic-layout'
 import { createGlobalStyle } from 'styled-components'
 import Heading from '../../atoms/Heading'
 import HollowButton from '../../atoms/HollowButton'
+import Text from '../../atoms/Text'
 
 const GlobalStyle = createGlobalStyle`
   body {
     background-image: linear-gradient(to right bottom, rgb(18, 18, 18), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
   }
+
 `
 
 const StyledImageBox = styled.div`
@@ -16,6 +18,28 @@ const StyledImageBox = styled.div`
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
+`
+
+const StyledUl = styled.ul`
+  display: flex;
+  padding: 0;
+  margin: 40px 0;
+  width: 100%;
+  justify-content: space-between;
+`
+
+const StyledList = styled.li`
+  text-decoration: none;
+  list-style: none;
+  padding-right: 5px;
+
+  &:not(:last-child) {
+    border-right: 1.5px solid grey;
+  }
+`
+
+const StyledLink = styled.a`
+  text-transform: capitalize;
 `
 
 const dataButtons = [
@@ -57,9 +81,36 @@ const User = () => {
         {dataButtons.map(button => (
           <HollowButton>{button.button}</HollowButton>
         ))}
-        <ul>
-          <li>foo</li>
-        </ul>
+        <StyledUl>
+          <StyledList>
+            <StyledLink href="#">
+              <Text small colorGrey textBold>
+                legal
+              </Text>
+            </StyledLink>
+          </StyledList>
+          <StyledList>
+            <StyledLink href="#">
+              <Text small colorGrey textBold>
+                privacy
+              </Text>
+            </StyledLink>
+          </StyledList>
+          <StyledList>
+            <StyledLink href="#">
+              <Text small colorGrey textBold>
+                cookies
+              </Text>
+            </StyledLink>
+          </StyledList>
+          <StyledList>
+            <StyledLink href="#">
+              <Text small colorGrey textBold>
+                about ads
+              </Text>
+            </StyledLink>
+          </StyledList>
+        </StyledUl>
       </Composition>
     </>
   )

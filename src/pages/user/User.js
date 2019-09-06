@@ -9,6 +9,7 @@ import Text from '../../atoms/Text'
 const GlobalStyle = createGlobalStyle`
   body {
     background-image: linear-gradient(to right bottom, rgb(18, 18, 18), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+    height: 100vh;
   }
 
 `

@@ -1,26 +1,15 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
+  background-color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.white};
   padding: 0.9rem 2.8rem;
   margin: 15px 0;
   text-transform: uppercase;
   font-size: 0.7rem;
-  background-color: ${({ kind, theme }) =>
-    kind === 'primary' ? theme.colors.green : 'rgba(24, 24, 24, 0.7)'};
   border-radius: 2rem;
   border: none;
-  box-shadow: ${({ kind }) =>
-    kind === 'primary' ? 0 : 'inset 0 0 0 2px #b3b3b3'};
-  color: ${({ kind, theme }) =>
-    kind === 'primary' ? theme.colors.white : theme.colors.green};
-
-  ${props =>
-    props.padding &&
-    `
-      padding: 7px 22px;
-      width: 100%;
-      color: white; 
-    `}
+  box-shadow: 0;
 `
 
 export default Button

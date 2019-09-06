@@ -14,7 +14,7 @@ const areasMobile = `
 `
 
 const StyledNavBar = styled.div`
-  background-color: ${({ theme }) => theme.colors.blackDark};
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100vh;
   padding: 2rem;
   box-sizing: border-box;

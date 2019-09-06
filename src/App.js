@@ -23,7 +23,6 @@ const areaMd = `
 const GlobalStyle = createGlobalStyle`
   body {
     font-size: 14px;
-    background-color: ${({ theme }) => theme.colors.greyDark};
     color: ${({ theme }) => theme.colors.white};
   }
 

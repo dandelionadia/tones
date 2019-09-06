@@ -5,6 +5,7 @@ import Logo from '../atoms/Logo.svg'
 import Menu from '../atoms/Menu'
 import { GoHome, GoSearch } from 'react-icons/go'
 import User from '../atoms/User'
+import { Link } from 'react-router-dom'
 
 const areasMobile = `
   logo auto
@@ -59,7 +60,9 @@ const NavBar = () => {
             <Menu data={dataLink} />
           </Areas.Links>
           <Areas.UserInfo flex align="end">
-            <User data={dataUser} />
+            <Link to="/user">
+              <User data={dataUser} />
+            </Link>
           </Areas.UserInfo>
         </>
       )}

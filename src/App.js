@@ -7,6 +7,7 @@ import Home from './pages/home/Home'
 import Album from './pages/album/Album'
 import NavBar from './molecules/NavBar'
 import MenuMobile from './atoms/MenuMobile'
+import User from './pages/user/User'
 
 const areaMobile = `
   menuMobile
@@ -56,6 +57,7 @@ const App = () => {
                 <Route path="/" exact component={Home} />
                 <Route path="/artist/:artistId" component={Index} />
                 <Route path="/album/:albumId" component={Album} />
+                <Route path="/user" component={User} />
               </Switch>
             </Areas.Content>
           </Router>

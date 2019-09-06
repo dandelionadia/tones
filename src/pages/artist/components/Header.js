@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Heading from '../../../atoms/Heading'
 import Text from '../../../atoms/Text'
 import Button from '../../../atoms/Button'
+import HollowButton from '../../../atoms/HollowButton'
 import Menu from '../../../molecules/Menu'
 
 function formatNumber(number) {
@@ -57,11 +58,11 @@ const Header = ({ artistData }) => {
             play
           </Text>
         </Button>
-        <Button>
+        <HollowButton kind="primary">
           <Text as="span" small letterSpacing>
             follow
           </Text>
-        </Button>
+        </HollowButton>
       </Composition>
       <Box flex justifyContent="center" paddingVertical={1.3}>
         <Menu />

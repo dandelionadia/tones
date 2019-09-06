@@ -7,6 +7,6 @@ export default {
     greyLight: '#b3b3b3',
     greyDark: '#181818',
     black: '#050505',
-    blackDark: '#050505'
+    blackDark: '#080808'
   }
 }

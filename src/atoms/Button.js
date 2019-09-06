@@ -10,9 +10,17 @@ const Button = styled.button`
   border-radius: 2rem;
   border: none;
   box-shadow: ${({ kind }) =>
-    kind === 'primary' ? 0 : 'inset 0 0 0 2px #b3b3b3'}
+    kind === 'primary' ? 0 : 'inset 0 0 0 2px #b3b3b3'};
   color: ${({ kind, theme }) =>
     kind === 'primary' ? theme.colors.white : theme.colors.green};
+
+  ${props =>
+    props.padding &&
+    `
+      padding: 7px 22px;
+      width: 100%;
+      color: white; 
+    `}
 `
 
 export default Button

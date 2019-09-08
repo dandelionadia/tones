@@ -8,6 +8,16 @@ import Text from '../../atoms/Text'
 
 const artistLink = [
   {
+    name: 'Led Zeppelin',
+    id: '36QJpDe2go2KgaRleHCDTp',
+    src: 'https://i.scdn.co/image/207803ce008388d3427a685254f9de6a8f61dc2e'
+  },
+  {
+    name: 'The Beatles',
+    id: '3WrFJ7ztbogyGnTHbHJFl2',
+    src: 'https://i.scdn.co/image/6b2a709752ef9c7aaf0d270344157f6cd2e0f1a7'
+  },
+  {
     name: 'Linkin Park',
     id: '6XyY86QOPPrYVGvF9ch6wz',
     src: 'https://i.scdn.co/image/1685533969d5b68cbc630f991e873bd6467f1814'

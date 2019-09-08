@@ -46,7 +46,7 @@ const Overview = ({ match }) => {
         <Albums data={albums.items} />
         <Box flex justifyContent="center">
           <ShowMoreButton>
-            <Text as="span" small letterSpacing>
+            <Text as="span" small Spaced>
               show more
             </Text>
             <IoIosArrowDown size={25} />

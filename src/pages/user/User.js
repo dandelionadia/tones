@@ -50,11 +50,9 @@ const dataButtons = [
   {
     button: 'full website'
   },
-  ,
   {
     button: 'help'
   },
-  ,
   {
     button: 'log out'
   }
@@ -75,12 +73,12 @@ const User = () => {
         <StyledImageBox>
           <img
             src="https://imgix.ranker.com/user_node_img/50058/1001158933/original/momo-is-an-incarnation-of-aye-aye-the-lemur-spirit-photo-u1?w=650&q=50&fm=pjpg&fit=crop&crop=faces"
-            alt="image"
-          ></img>
+            alt="avatar"
+          />
         </StyledImageBox>
         <Heading margin>Dangora</Heading>
-        {dataButtons.map(button => (
-          <HollowButton>{button.button}</HollowButton>
+        {dataButtons.map((button, index) => (
+          <HollowButton key={index}>{button.button}</HollowButton>
         ))}
         <StyledUl>
           <StyledList>

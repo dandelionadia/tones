@@ -13,7 +13,7 @@ const HollowButton = styled.button`
   box-shadow: inset 0 0 0 2px #b3b3b3;
 
   ${({ kind }) =>
-    kind != 'primary' &&
+    kind !== 'primary' &&
     css`
       width: 100%;
     `};

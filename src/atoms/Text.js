@@ -29,7 +29,7 @@ const Text = styled.p`
     `}
 
   ${props =>
-    props.letterSpacing &&
+    props.Spaced &&
     css`
       letter-spacing: 0.15rem;
     `}

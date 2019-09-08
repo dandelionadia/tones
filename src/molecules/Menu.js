@@ -56,7 +56,7 @@ class Menu extends React.Component {
         {menu.map((item, index) => (
           <StyledList key={index}>
             <StyledLink exact to={match.url + item.url}>
-              <Text textBold small letterSpacing>
+              <Text textBold small Spaced>
                 {item.value}
               </Text>
             </StyledLink>

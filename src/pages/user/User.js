@@ -27,6 +27,7 @@ const StyledUl = styled.ul`
   margin: 40px 0;
   width: 100%;
   justify-content: space-between;
+  cursor: pointer;
 `
 
 const StyledList = styled.li`

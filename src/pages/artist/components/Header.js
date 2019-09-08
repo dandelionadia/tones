@@ -42,7 +42,7 @@ const StyledTitle = styled(Heading)`
 const Header = ({ artistData }) => {
   return (
     <StyledHeader imageUrl={artistData.images[0].url}>
-      <Text small Spaced>
+      <Text small spaced>
         {formatNumber(artistData.followers.total)} MONTHLY LISTENERS
       </Text>
       <StyledTitle as="h1">{artistData.name}</StyledTitle>
@@ -54,12 +54,12 @@ const Header = ({ artistData }) => {
         paddingBottom={1.9}
       >
         <Button kind="primary">
-          <Text as="span" small Spaced>
+          <Text as="span" small paced>
             play
           </Text>
         </Button>
         <HollowButton kind="primary">
-          <Text as="span" small Spaced>
+          <Text as="span" small spaced>
             follow
           </Text>
         </HollowButton>

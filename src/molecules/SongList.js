@@ -7,12 +7,19 @@ class SongList extends React.Component {
     isSongClick: false
   }
 
-  handleSongClick = () => {
+  handleSongClick = song => {
+    const { preview_url } = song
     const isSongClick = this.state.isSongClick
     this.setState({
       isSongClick: !isSongClick
     })
     console.log('ok!')
+    console.log({ preview_url })
+
+    if (isSongClick) {
+      var horn = new Audio(preview_url)
+      horn.play()
+    }
   }
 
   render() {
@@ -36,7 +43,7 @@ class SongList extends React.Component {
               title={song.name}
               duration={duration}
               artist={song.artists && song.artists[0]}
-              onClick={this.handleSongClick}
+              onClick={() => this.handleSongClick(song)}
             />
           )
         })}

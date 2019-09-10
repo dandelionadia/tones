@@ -13,7 +13,7 @@ const areasPlain = `
 	/ auto 1fr
 `
 
-const Song = ({ imageUrl, title, duration, artist }) => {
+const Song = ({ imageUrl, title, duration, artist, onClick }) => {
   return (
     <Composition
       template={imageUrl ? areasFull : areasPlain}
@@ -23,11 +23,11 @@ const Song = ({ imageUrl, title, duration, artist }) => {
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>
           <Icon>
-            <IoIosMusicalNote fill="#b3b3b3" />
+            <IoIosMusicalNote fill="#b3b3b3" onClick={onClick} />
           </Icon>
           {imageUrl && (
             <Thumbnail>
-              <img src={imageUrl} alt={title} />
+              <img src={imageUrl} alt={title} onClick={onClick} />
             </Thumbnail>
           )}
           <Content>

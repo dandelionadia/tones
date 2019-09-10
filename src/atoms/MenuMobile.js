@@ -22,7 +22,7 @@ const StyledMenu = styled.div`
 
 const StyledMenuBtn = styled.div`
   background-color: darkslategrey;
-  padding: 1rem;
+  padding: 0.5rem;
 `
 
 const StyledMenuBtnLine = styled.div`

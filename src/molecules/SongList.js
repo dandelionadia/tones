@@ -7,10 +7,13 @@ class SongList extends React.Component {
     isSongClick: false
   }
 
+  componentDidMount() {
+    this.horn = new Audio()
+  }
+
   handleSongClick = song => {
     const { preview_url } = song
     const isSongClick = this.state.isSongClick
-    const horn = new Audio(preview_url)
 
     this.setState(
       {
@@ -18,10 +21,11 @@ class SongList extends React.Component {
       },
       () => {
         if (this.state.isSongClick) {
-          horn.play()
+          this.horn.src = preview_url
+          this.horn.play()
           console.log('ok!')
         } else {
-          horn.pause()
+          this.horn.pause()
           console.log('foo')
         }
       }

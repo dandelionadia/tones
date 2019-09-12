@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Composition } from 'atomic-layout'
-import { IoIosMusicalNote } from 'react-icons/io'
+import { IoIosMusicalNote, IoIosPlay } from 'react-icons/io'
 import Text from '../atoms/Text'
 
 const areasFull = `
@@ -27,7 +27,11 @@ const Song = ({ imageUrl, title, duration, artist, onClick }) => {
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>
           <Icon>
-            <IoIosMusicalNote fill="#b3b3b3" onClick={onClick} />
+            {isHover ? (
+              <IoIosPlay fill="#b3b3b3" onClick={onClick} />
+            ) : (
+              <IoIosMusicalNote fill="#b3b3b3" onClick={onClick} />
+            )}
           </Icon>
           {imageUrl && (
             <Thumbnail>

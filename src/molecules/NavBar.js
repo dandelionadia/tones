@@ -36,7 +36,7 @@ const dataLink = [
   {
     icon: GoSearch,
     name: 'Search',
-    url: ''
+    url: '/search'
   }
 ]
 

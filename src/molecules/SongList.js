@@ -7,6 +7,7 @@ class SongList extends React.Component {
     //початковий стан id
     playingSongId: null
   }
+
   //player
   componentDidMount() {
     this.player = new Audio()

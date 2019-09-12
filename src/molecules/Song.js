@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Composition } from 'atomic-layout'
 import { IoIosMusicalNote } from 'react-icons/io'
 import Text from '../atoms/Text'
@@ -14,11 +14,15 @@ const areasPlain = `
 `
 
 const Song = ({ imageUrl, title, duration, artist, onClick }) => {
+  const [isHover, setIsHover] = useState(false)
+
   return (
     <Composition
       template={imageUrl ? areasFull : areasPlain}
       gap={1}
       alignItems="center"
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
     >
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>

@@ -12,6 +12,7 @@ class SongList extends React.Component {
   componentDidMount() {
     this.player = new Audio()
   }
+
   //fuction котру викликає onClick і передає як аргумент пісню на яку нажали
   handleSongClick = song => {
     //беремо url кожноі пісні
@@ -19,12 +20,13 @@ class SongList extends React.Component {
 
     // якщо пісня на яку ми нажали дорівнює початковому id пісні то виконай що в месередині а ні то перейди на нищу дію за межами if
     if (song.id === this.state.playingSongId) {
-      this.setState({
-        //змінити стан id
-        playingSongId: null
-      })
-      //вимкнути пісню
-      this.player.pause()
+      //якщо пісня на паузі то грай
+      if (this.player.paused) {
+        this.player.play()
+        //якщо грає то постав на паузу
+      } else {
+        this.player.pause()
+      }
       //закінчити function
       return
     }

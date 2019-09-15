@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Composition } from 'atomic-layout'
-import { IoIosMusicalNote, IoIosPlay } from 'react-icons/io'
+import { IoIosMusicalNote, IoIosPlay, IoIosPause } from 'react-icons/io'
 import Text from '../atoms/Text'
 
 const areasFull = `
@@ -13,8 +13,29 @@ const areasPlain = `
 	/ auto 1fr
 `
 
-const Song = ({ imageUrl, title, duration, artist, onClick }) => {
+function getIcon(isHover, isActive, isPlaying) {
+  if (isActive) {
+    return isPlaying ? IoIosPause : IoIosPlay
+  }
+
+  if (isHover) {
+    return IoIosPlay
+  }
+
+  return IoIosMusicalNote
+}
+
+const Song = ({
+  imageUrl,
+  title,
+  duration,
+  artist,
+  onPlayClick,
+  isActive,
+  isPlaying
+}) => {
   const [isHover, setIsHover] = useState(false)
+  const PlayIcon = getIcon(isHover, isActive, isPlaying)
 
   return (
     <Composition
@@ -27,15 +48,11 @@ const Song = ({ imageUrl, title, duration, artist, onClick }) => {
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>
           <Icon>
-            {isHover ? (
-              <IoIosPlay fill="#b3b3b3" onClick={onClick} />
-            ) : (
-              <IoIosMusicalNote fill="#b3b3b3" onClick={onClick} />
-            )}
+            <PlayIcon fill="#b3b3b3" onClick={onPlayClick} />
           </Icon>
           {imageUrl && (
             <Thumbnail>
-              <img src={imageUrl} alt={title} onClick={onClick} />
+              <img src={imageUrl} alt={title} onClick={onPlayClick} />
             </Thumbnail>
           )}
           <Content>

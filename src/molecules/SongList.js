@@ -61,7 +61,7 @@ class SongList extends React.Component {
     const { list } = this.props
 
     return (
-      <Composition gap="6px">
+      <Composition>
         {list.map(song => {
           const date = new Date(song.duration_ms)
           const duration =

@@ -63,6 +63,12 @@ const Text = styled.p`
     css`
       opacity: 0.6;
     `}
+  
+  ${({ color }) =>
+    color &&
+    css`
+      color: ${color};
+    `};
 `
 
 export default Text

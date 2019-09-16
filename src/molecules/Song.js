@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Composition } from 'atomic-layout'
+import styled from 'styled-components'
 import { IoIosMusicalNote, IoIosPlay, IoIosPause } from 'react-icons/io'
 import Text from '../atoms/Text'
 
@@ -11,6 +12,11 @@ const areasFull = `
 const areasPlain = `
 	icon content meta
 	/ auto 1fr
+`
+
+const StyledSong = styled.div`
+  background-color: ${({ isHover, isActive }) =>
+    isHover || isActive ? 'rgba(0,0,0,1)' : 'null'};
 `
 
 function getIcon(isHover, isActive, isPlaying) {
@@ -44,6 +50,11 @@ const Song = ({
       alignItems="center"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      as={StyledSong}
+      isHover={isHover}
+      isActive={isActive}
+      paddingVertical={0.8}
+      paddingHorizontal={1}
     >
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>

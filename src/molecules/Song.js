@@ -17,6 +17,7 @@ const areasPlain = `
 const StyledSong = styled.div`
   background-color: ${({ isHover, isActive }) =>
     isHover || isActive ? 'rgba(0,0,0,1)' : 'null'};
+  color: ${({ isActive }) => isActive && '#1ed760'};
 `
 
 function getIcon(isHover, isActive, isPlaying) {

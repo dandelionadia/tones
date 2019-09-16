@@ -60,7 +60,10 @@ const Song = ({
       {({ Icon, Thumbnail, Content, Meta }) => (
         <>
           <Icon>
-            <PlayIcon fill="#b3b3b3" onClick={onPlayClick} />
+            <PlayIcon
+              fill={isActive ? '#1ed760' : '#b3b3b3'}
+              onClick={onPlayClick}
+            />
           </Icon>
           {imageUrl && (
             <Thumbnail>

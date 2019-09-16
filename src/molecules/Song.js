@@ -75,7 +75,9 @@ const Song = ({
             {artist && <Text colorGrey>{artist.name}</Text>}
           </Content>
           <Meta paddingRight={0.5}>
-            <Text colorGrey>{duration}</Text>
+            <Text colorGrey color={isActive && 'green'}>
+              {duration}
+            </Text>
           </Meta>
         </>
       )}

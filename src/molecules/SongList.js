@@ -54,7 +54,6 @@ class SongList extends React.Component {
         })
       }
     )
-    console.log({ preview_url })
   }
 
   render() {

@@ -13,11 +13,6 @@ const artistLink = [
     src: 'https://i.scdn.co/image/207803ce008388d3427a685254f9de6a8f61dc2e'
   },
   {
-    name: 'The Beatles',
-    id: '3WrFJ7ztbogyGnTHbHJFl2',
-    src: 'https://i.scdn.co/image/6b2a709752ef9c7aaf0d270344157f6cd2e0f1a7'
-  },
-  {
     name: 'Linkin Park',
     id: '6XyY86QOPPrYVGvF9ch6wz',
     src: 'https://i.scdn.co/image/1685533969d5b68cbc630f991e873bd6467f1814'
@@ -47,16 +42,6 @@ const artistLink = [
     id: '7FBcuc1gsnv6Y1nwFtNRCb',
     src:
       'https://pbs.twimg.com/profile_images/3351451544/d82ed9e7c92e9f8664fd0a88231b6b41.jpeg'
-  },
-  {
-    name: 'Of Monsters and Men',
-    id: '4dwdTW1Lfiq0cM8nBAqIIz',
-    src: 'https://i.scdn.co/image/3e38d07dccf32d6b32c1b7768263041ebe5e50c5'
-  },
-  {
-    name: 'Metallica',
-    id: '2ye2Wgw4gimLv2eAKyk1NB',
-    src: 'https://i.scdn.co/image/5a06711d7fc48d5e0e3f9a3274ffed3f0af1bd91'
   }
 ]
 

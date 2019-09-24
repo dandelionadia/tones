@@ -3,15 +3,27 @@ import styled from 'styled-components'
 import { Box } from 'atomic-layout'
 
 const StyledInput = styled.input`
+  background-color: #282828;
+  color: #fff;
   width: 100%;
-  margin: 0.4rem 0;
+  padding: 16px;
+  border: none;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
 `
 
 const Search = () => {
   return (
     <>
       <Box>
-        <StyledInput type="text" id="name" name="name" />
+        <StyledInput
+          type="search"
+          id="search"
+          name="search"
+          placeholder="Start typing..."
+        />
       </Box>
     </>
   )

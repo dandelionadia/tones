@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Box } from 'atomic-layout'
+import { Link } from 'react-router-dom'
+import Grid from '../../atoms/Grid'
 
 const StyledInput = styled.input`
   background-color: #282828;
@@ -45,11 +47,17 @@ const Search = () => {
           value={value}
           onChange={handleChange}
         />
-        {searchResults &&
-          searchResults.artists &&
-          searchResults.artists.items.map(artist => {
-            return <p key={artist.id}>{artist.name}</p>
-          })}
+        <Grid>
+          {searchResults &&
+            searchResults.artists &&
+            searchResults.artists.items.map(artist => {
+              return (
+                <Link to={`artist/${artist.id}`} key={artist.id}>
+                  <p key={artist.id}>{artist.name}</p>
+                </Link>
+              )
+            })}
+        </Grid>
       </Box>
     </>
   )

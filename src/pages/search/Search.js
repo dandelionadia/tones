@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Box } from 'atomic-layout'
 
@@ -15,11 +15,25 @@ const StyledInput = styled.input`
 `
 
 const Search = () => {
+  //state text which was written in the input
   const [value, setValue] = useState('')
+  //state resalt from backend
+  const [searchResults, setSearchResults] = useState(null)
+
+  useEffect(() => {
+    fetch(
+      `https://spotify-proxy-57097.herokuapp.com/v1/search?q=${value}&type=artist`
+    )
+      .then(response => response.json())
+      .then(json => {
+        setSearchResults(json)
+      })
+  }, [value])
 
   const handleChange = event => {
     return setValue(event.target.value)
   }
+
   return (
     <>
       <Box>
@@ -31,6 +45,11 @@ const Search = () => {
           value={value}
           onChange={handleChange}
         />
+        {searchResults &&
+          searchResults.artists &&
+          searchResults.artists.items.map(artist => {
+            return <p key={artist.id}>{artist.name}</p>
+          })}
       </Box>
     </>
   )

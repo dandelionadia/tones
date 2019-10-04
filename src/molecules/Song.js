@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
-import { Composition } from 'atomic-layout'
+import Layout, { Composition } from 'atomic-layout'
 import styled from 'styled-components'
 import { IoIosMusicalNote, IoIosPlay, IoIosPause } from 'react-icons/io'
 import Text from '../atoms/Text'
 
 const areasFull = `
 	icon thumbnail content meta
-	/ auto 50px 1fr
+	/ auto auto 1fr
 `
 
 const areasPlain = `
 	icon content meta
 	/ auto 1fr
+`
+const StyledThumbnail = styled.img`
+  width: 50px;
+  @media (max-width: ${Layout.breakpoints.sm.maxWidth}) {
+    display: none;
+  }
 `
 
 const StyledSong = styled.div`
@@ -67,7 +73,11 @@ const Song = ({
           </Icon>
           {imageUrl && (
             <Thumbnail>
-              <img src={imageUrl} alt={title} onClick={onPlayClick} />
+              <StyledThumbnail
+                src={imageUrl}
+                alt={title}
+                onClick={onPlayClick}
+              />
             </Thumbnail>
           )}
           <Content>

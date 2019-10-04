@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import { Box } from 'atomic-layout'
 import debounce from 'lodash.debounce'
@@ -23,19 +23,20 @@ const Search = () => {
   //state resalt from backend
   const [searchResults, setSearchResults] = useState(null)
 
-  const doSearch = searchQuery => {
-    fetch(
-      `https://spotify-proxy-57097.herokuapp.com/v1/search?q=${searchQuery}&type=artist`
-    )
-      .then(response => response.json())
-      .then(json => {
-        setSearchResults(json)
-      })
-  }
+  const doSearch = useRef(
+    debounce(searchQuery => {
+      fetch(
+        `https://spotify-proxy-57097.herokuapp.com/v1/search?q=${searchQuery}&type=artist`
+      )
+        .then(response => response.json())
+        .then(json => {
+          setSearchResults(json)
+        })
+    }, 300)
+  ).current
 
   const handleChange = event => {
     const nextValue = event.target.value
-    console.log(event)
     setValue(nextValue)
     doSearch(nextValue)
   }

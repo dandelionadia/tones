@@ -15,6 +15,10 @@ const StyledInput = styled.input`
   line-height: 44px;
   letter-spacing: 0.02em;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    padding-left: 40px;
+  }
 `
 
 const Search = () => {

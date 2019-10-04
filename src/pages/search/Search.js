@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Box } from 'atomic-layout'
+import debounce from 'lodash.debounce'
 import { Link } from 'react-router-dom'
 import Grid from '../../atoms/Grid'
 
@@ -22,18 +23,21 @@ const Search = () => {
   //state resalt from backend
   const [searchResults, setSearchResults] = useState(null)
 
-  useEffect(() => {
+  const doSearch = searchQuery => {
     fetch(
-      `https://spotify-proxy-57097.herokuapp.com/v1/search?q=${value}&type=artist`
+      `https://spotify-proxy-57097.herokuapp.com/v1/search?q=${searchQuery}&type=artist`
     )
       .then(response => response.json())
       .then(json => {
         setSearchResults(json)
       })
-  }, [value])
+  }
 
   const handleChange = event => {
-    return setValue(event.target.value)
+    const nextValue = event.target.value
+    console.log(event)
+    setValue(nextValue)
+    doSearch(nextValue)
   }
 
   return (
@@ -46,6 +50,7 @@ const Search = () => {
           placeholder="Start typing..."
           value={value}
           onChange={handleChange}
+          autoComplete="off"
         />
         <Grid>
           {searchResults &&

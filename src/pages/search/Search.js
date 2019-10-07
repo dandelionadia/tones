@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
-import { Box } from 'atomic-layout'
+import Layout, { Box } from 'atomic-layout'
 import debounce from 'lodash.debounce'
 import { Link } from 'react-router-dom'
 import Grid from '../../atoms/Grid'
@@ -16,7 +16,7 @@ const StyledInput = styled.input`
   letter-spacing: 0.02em;
   font-weight: bold;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${Layout.breakpoints.md.maxWidth}) {
     padding-left: 40px;
   }
 `

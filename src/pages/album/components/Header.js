@@ -62,7 +62,7 @@ function Header({ data }) {
   const artistLinkColor = useResponsiveValue(
     {
       lg: true,
-      xl: true
+      xl: true,
     },
     false
   )
@@ -70,7 +70,7 @@ function Header({ data }) {
   const artistLinkOpacity = useResponsiveValue(
     {
       lg: true,
-      xl: true
+      xl: true,
     },
     false
   )
@@ -86,7 +86,7 @@ function Header({ data }) {
       maxWidthDown="300px"
       marginHorizontalDown="auto"
     >
-      {Areas => (
+      {(Areas) => (
         <>
           <Areas.Image>
             <StyledImage src={data.images[0].url} />

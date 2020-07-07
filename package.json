@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "atomic-layout": "^0.9.4",
+    "atomic-layout": "^0.12.6",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
